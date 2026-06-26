@@ -182,6 +182,7 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="5">Session 5 - Friendship Stories</option>
       <option value="6">Session 6 - Feelings (Positive)</option>
       <option value="7">Session 7 - Feelings (Negative)</option>
+      <option value="8">Session 8 - Money & Budgeting</option>
     </select>
   </div>
 
@@ -273,6 +274,7 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="5">Session 5</option>
       <option value="6">Session 6</option>
       <option value="7">Session 7</option>
+      <option value="8">Session 8</option>
     </select>
     <button class="btn btn-secondary btn-small" onclick="clearLeaderboard()" style="margin-left:auto;font-size:.82rem;padding:8px 14px">Clear All</button>
   </div>
@@ -366,6 +368,18 @@ const questionBank = {
     {q: 'What does "depressed" mean?', options: ['Very sad for a long time','Very excited','Very energetic','Very hungry'], answer: 0, explanation: 'Depressed = deeply sad over a long period.'},
     {q: 'TV, ice cream, and vacation are examples of...', options: ['wants','needs','requirements','necessities'], answer: 0, explanation: 'Wants are things we desire but don\'t need to survive.'},
     {q: 'Negative thoughts are like...', options: ['ants at a picnic','stars in the sky','fish in the sea','birds in a tree'], answer: 0, explanation: 'ANTs = Automatic Negative Thoughts (they ruin good things like ants at a picnic!).'},
+  ],
+  8: [
+    {q: 'A plan for how to spend and save money is called a...', options: ['budget','loan','cost','salary'], answer: 0, explanation: 'A budget is a plan for managing your money.'},
+    {q: '"You _____ save money every month."', options: ['should','have to','shouldn\'t','has to'], answer: 0, explanation: '"Should" gives advice — it\'s a good idea to save.'},
+    {q: 'What does "invest" mean?', options: ['Put money into something to make it grow','Spend money quickly','Borrow money','Lose money'], answer: 0, explanation: 'Invest = use money to make more money over time.'},
+    {q: '"She _____ spend so much on clothes."', options: ['shouldn\'t','should','has to','must'], answer: 0, explanation: '"Shouldn\'t" = it\'s not a good idea.'},
+    {q: 'Money you receive for working is called...', options: ['salary','budget','debt','expense'], answer: 0, explanation: 'Salary = the money your employer pays you.'},
+    {q: '"You _____ pay your rent on time."', options: ['have to','should','might','could'], answer: 0, explanation: '"Have to" = it\'s necessary/required, not optional.'},
+    {q: 'What does "debt" mean?', options: ['Money you owe someone','Money you save','Money you find','Money you invest'], answer: 0, explanation: 'Debt = money that you must pay back.'},
+    {q: '"They _____ track their expenses."', options: ['should','shouldn\'t','mustn\'t','can\'t'], answer: 0, explanation: '"Should" = good advice for money management.'},
+    {q: 'What is an "expense"?', options: ['Money you spend','Money you earn','Money you save','Money you find'], answer: 0, explanation: 'An expense is something you spend money on.'},
+    {q: '"He _____ work overtime to pay his bills."', options: ['has to','should','might','would'], answer: 0, explanation: '"Has to" = necessity, he has no choice.'},
   ]
 };
 
@@ -496,7 +510,7 @@ function renderLeaderboard() {
   if (!lb.length) { body.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
   const medals = ['&#129351;','&#129352;','&#129353;'];
-  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7'};
+  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7','8':'S8'};
   body.innerHTML = lb.map((e,i) => `<tr><td>${medals[i]||i+1}</td><td>${esc(e.name)}</td><td style="color:var(--accent);font-weight:700">${e.score}</td><td>${sessionNames[e.session]||'All'}</td><td style="color:var(--text-dim)">${e.date}</td></tr>`).join('');
 }
 
@@ -732,53 +746,4 @@ function endGame() {
 }
 
 // ===================== CONFETTI =====================
-function launchConfetti() {
-  const container = document.getElementById('confettiContainer');
-  container.innerHTML = '';
-  const colors = ['#a78bfa','#f472b6','#34d399','#60a5fa','#f59e0b','#e21b3c','#1368ce'];
-  for (let i = 0; i < 60; i++) {
-    const piece = document.createElement('div');
-    piece.className = 'confetti-piece';
-    piece.style.left = Math.random() * 100 + '%';
-    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-    piece.style.width = (Math.random() * 8 + 6) + 'px';
-    piece.style.height = (Math.random() * 8 + 6) + 'px';
-    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-    piece.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
-    piece.style.animationDelay = (Math.random() * 1.5) + 's';
-    container.appendChild(piece);
-  }
-  setTimeout(() => container.innerHTML = '', 5000);
-}
-
-// ===================== SHARE / REPLAY =====================
-function shareScore() {
-  const gs = gameState;
-  const sessionName = gs.session === 'all' ? 'All Sessions' : `Session ${gs.session}`;
-  const text = `I scored ${gs.score} points on AUC A2A Quiz Challenge! (${gs.correct}/${gs.questions.length} correct, ${sessionName}, ${currentDifficulty} mode) Can you beat my score?`;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('#resultsScreen .btn-primary');
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    btn.style.background = 'var(--green)';
-    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 2000);
-  }).catch(() => {
-    alert(text);
-  });
-}
-
-function playAgain() {
-  showScreen('welcomeScreen');
-  refreshPreview();
-}
-
-// ===================== INIT =====================
-refreshPreview();
-
-// Enter key starts game from name field
-document.getElementById('playerName').addEventListener('keydown', e => {
-  if (e.key === 'Enter') startGame();
-});
-</script>
-</body>
-</html>
+function la

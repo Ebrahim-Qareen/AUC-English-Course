@@ -247,6 +247,7 @@ function saveLB(){
   lb.push({name:playerN,score:score,diff:difficulty,date:new Date().toLocaleDateString()});
   lb.sort((a,b)=>b.score-a.score);lb=lb.slice(0,10);
   localStorage.setItem(LB_KEY,JSON.stringify(lb));
+try{var ulb=JSON.parse(localStorage.getItem('auc_quiz_lb')||'[]');ulb.push({name:playerN,score:score,session:'1',date:new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})});ulb.sort(function(a,b){return b.score-a.score});if(ulb.length>50)ulb.length=50;localStorage.setItem('auc_quiz_lb',JSON.stringify(ulb))}catch(e){}
 }
 function renderLB(){
   const lb=JSON.parse(localStorage.getItem(LB_KEY)||'[]');

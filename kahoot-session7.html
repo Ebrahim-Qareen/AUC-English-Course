@@ -228,6 +228,7 @@ function endGame(){
   lb.push({name,score,correct:correctCount,total:questions.length,date:new Date().toLocaleDateString()});
   lb.sort((a,b)=>b.score-a.score);lb=lb.slice(0,10);
   try{localStorage.setItem('kahoot_s7_lb',JSON.stringify(lb))}catch(e){}
+try{var ulb=JSON.parse(localStorage.getItem('auc_quiz_lb')||'[]');ulb.push({name:name,score:score,session:'7',date:new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})});ulb.sort(function(a,b){return b.score-a.score});if(ulb.length>50)ulb.length=50;localStorage.setItem('auc_quiz_lb',JSON.stringify(ulb))}catch(e){}
   const lbDiv=document.getElementById('leaderboard');lbDiv.innerHTML='';
   lb.forEach((entry,i)=>{const medals=['\u{1F451}','\u{1F948}','\u{1F949}'];lbDiv.innerHTML+='<div class="lb-row'+(i===0?' gold':'')+'"><span class="rank">'+(medals[i]||'#'+(i+1))+'</span><span class="name">'+entry.name+'</span><span class="pts">'+entry.score+' pts</span></div>'});
   if(pct>=70)createGameConfetti();

@@ -199,6 +199,7 @@ lb.push({name:n,score:state.score,diff:state.difficulty,date:new Date().toLocale
 lb.sort((a,b)=>b.score-a.score);
 if(lb.length>10)lb.length=10;
 localStorage.setItem(LB_KEY,JSON.stringify(lb));
+try{var ulb=JSON.parse(localStorage.getItem('auc_quiz_lb')||'[]');ulb.push({name:state.name||'Player',score:state.score,session:'8',date:new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})});ulb.sort(function(a,b){return b.score-a.score});if(ulb.length>50)ulb.length=50;localStorage.setItem('auc_quiz_lb',JSON.stringify(ulb))}catch(e){}
 state.name=n;
 document.getElementById('lbDiv').innerHTML=renderLB(lb)}
 

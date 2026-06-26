@@ -273,6 +273,7 @@ function endGame(){
   lb.sort((a,b)=>b.score-a.score);
   lb=lb.slice(0,10);
   try{localStorage.setItem('kahoot_s6_lb',JSON.stringify(lb))}catch(e){}
+try{var ulb=JSON.parse(localStorage.getItem('auc_quiz_lb')||'[]');ulb.push({name:name,score:score,session:'6',date:new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})});ulb.sort(function(a,b){return b.score-a.score});if(ulb.length>50)ulb.length=50;localStorage.setItem('auc_quiz_lb',JSON.stringify(ulb))}catch(e){}
   
   const lbDiv=document.getElementById('leaderboard');
   lbDiv.innerHTML='';
