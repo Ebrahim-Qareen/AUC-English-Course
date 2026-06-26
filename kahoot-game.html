@@ -746,4 +746,23 @@ function endGame() {
 }
 
 // ===================== CONFETTI =====================
-function la
+function launchConfetti() {
+  const container = document.getElementById('confettiContainer');
+  const colors = ['#e74c3c','#3498db','#2ecc71','#f39c12','#9b59b6','#e91e63','#00bcd4','#ff5722'];
+  for (let i = 0; i < 80; i++) {
+    const piece = document.createElement('div');
+    piece.style.cssText = `position:fixed;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};left:${Math.random()*100}%;top:-10px;border-radius:${Math.random()>0.5?'50%':'2px'};pointer-events:none;z-index:9999;animation:confettiFall ${1.5+Math.random()*2}s ease-out forwards;animation-delay:${Math.random()*0.5}s;opacity:0;`;
+    container.appendChild(piece);
+  }
+  setTimeout(() => container.innerHTML = '', 4000);
+}
+
+if (!document.getElementById('confettiStyle')) {
+  const style = document.createElement('style');
+  style.id = 'confettiStyle';
+  style.textContent = `@keyframes confettiFall{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}`;
+  document.head.appendChild(style);
+}
+</script>
+</body>
+</html>
