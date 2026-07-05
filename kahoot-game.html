@@ -183,6 +183,7 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="6">Session 6 - Feelings (Positive)</option>
       <option value="7">Session 7 - Feelings (Negative)</option>
       <option value="8">Session 8 - Money & Budgeting</option>
+      <option value="9">Session 9 - Deserted Island</option>
     </select>
   </div>
 
@@ -275,6 +276,7 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="6">Session 6</option>
       <option value="7">Session 7</option>
       <option value="8">Session 8</option>
+      <option value="9">Session 9</option>
     </select>
     <button class="btn btn-secondary btn-small" onclick="clearLeaderboard()" style="margin-left:auto;font-size:.82rem;padding:8px 14px">Clear All</button>
   </div>
@@ -380,6 +382,28 @@ const questionBank = {
     {q: '"They _____ track their expenses."', options: ['should','shouldn\'t','mustn\'t','can\'t'], answer: 0, explanation: '"Should" = good advice for money management.'},
     {q: 'What is an "expense"?', options: ['Money you spend','Money you earn','Money you save','Money you find'], answer: 0, explanation: 'An expense is something you spend money on.'},
     {q: '"He _____ work overtime to pay his bills."', options: ['has to','should','might','would'], answer: 0, explanation: '"Has to" = necessity, he has no choice.'},
+  ],
+  9: [
+    {q: 'A piece of land surrounded by water is called...', options: ['an island','a shore','a beach','a cave'], answer: 0, explanation: 'An island is land completely surrounded by water.'},
+    {q: 'A person left alone after a shipwreck is a...', options: ['castaway','crew','diary','adventure'], answer: 0, explanation: 'A castaway is someone stranded after a shipwreck.'},
+    {q: 'To save someone from danger = ?', options: ['rescue','explore','hunt','signal'], answer: 0, explanation: 'Rescue means to save someone from a dangerous situation.'},
+    {q: 'A flat boat made from pieces of wood = ?', options: ['raft','shelter','ship','cave'], answer: 0, explanation: 'A raft is a simple flat boat made from wood or other materials.'},
+    {q: 'Things you need like food and tools = ?', options: ['supplies','dangers','shores','crews'], answer: 0, explanation: 'Supplies = essential things like food, water, and tools.'},
+    {q: '"______ beautiful island!" — choose the correct exclamation.', options: ['What a','What','How a','How'], answer: 0, explanation: '"What a + adjective + singular noun" for exclamations.'},
+    {q: '"______ amazing views from the hill!"', options: ['What','What a','How a','How'], answer: 0, explanation: '"What + adjective + plural noun" (no "a" for plural).'},
+    {q: '"______ scary experience!"', options: ['What a','What','How','How a'], answer: 0, explanation: '"What a + adjective + singular noun" for exclamations.'},
+    {q: '"______ brave man Selkirk was!"', options: ['What a','How','What','How a'], answer: 0, explanation: '"What a + adjective + noun" for exclamations about people.'},
+    {q: '"In the same boat" means...', options: ['In the same difficult situation','On a real boat','Going sailing','Having fun'], answer: 0, explanation: 'In the same boat = sharing the same difficult situation.'},
+    {q: '"Sink or swim" means...', options: ['Succeed or fail by yourself','Go to the beach','Learn to swim','Take a bath'], answer: 0, explanation: 'Sink or swim = you must handle it alone, succeed or fail.'},
+    {q: '"Weather the storm" means...', options: ['Survive a difficult time','Check the weather','Go outside in rain','Cancel your plans'], answer: 0, explanation: 'Weather the storm = get through a tough situation.'},
+    {q: 'How did Robinson Crusoe survive on the island?', options: ['Grew food and kept a diary','Built a boat','Stayed in a hotel','Called for help'], answer: 0, explanation: 'Crusoe survived by farming, building shelter, and writing in his diary.'},
+    {q: 'How long were the Tongan boys stranded?', options: ['15 months','6 months','2 years','3 years'], answer: 0, explanation: 'The six Tongan boys were stranded for about 15 months.'},
+    {q: 'Why did Alexander Selkirk stay on the island?', options: ['He believed his ship would sink','He wanted to explore','By accident','He was forced'], answer: 0, explanation: 'Selkirk chose to stay because he thought the ship was unsafe — and he was right.'},
+    {q: 'Not afraid of danger = ?', options: ['brave','lonely','desert','calm'], answer: 0, explanation: 'Brave = willing to face danger without fear.'},
+    {q: 'To travel around a new place = ?', options: ['explore','hunt','survive','escape'], answer: 0, explanation: 'Explore = travel through an unfamiliar area to learn about it.'},
+    {q: '"Go with the flow" means...', options: ['Accept things as they happen','Swim in the river','Follow the crowd','Move faster'], answer: 0, explanation: 'Go with the flow = relax and accept the situation.'},
+    {q: '"Test the waters" means...', options: ['Try something carefully first','Jump in the ocean','Check water temperature','Take a swimming test'], answer: 0, explanation: 'Test the waters = try something cautiously before committing.'},
+    {q: '"What ______ terrible weather!" — choose the correct word.', options: ['(nothing needed)','a','an','the'], answer: 0, explanation: '"What terrible weather!" — no article with uncountable nouns.'},
   ]
 };
 
@@ -510,7 +534,7 @@ function renderLeaderboard() {
   if (!lb.length) { body.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
   const medals = ['&#129351;','&#129352;','&#129353;'];
-  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7','8':'S8'};
+  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7','8':'S8','9':'S9'};
   body.innerHTML = lb.map((e,i) => `<tr><td>${medals[i]||i+1}</td><td>${esc(e.name)}</td><td style="color:var(--accent);font-weight:700">${e.score}</td><td>${sessionNames[e.session]||'All'}</td><td style="color:var(--text-dim)">${e.date}</td></tr>`).join('');
 }
 
