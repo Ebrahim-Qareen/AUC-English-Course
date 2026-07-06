@@ -10,7 +10,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 h1,h2,h3{font-family:'Fredoka',sans-serif}
-.hero{background:linear-gradient(135deg,#f0c929 0%,#e8a838 40%,#e8862a 100%);padding:50px 24px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#2d9d78 0%,#3b82f6 40%,#e8a838 100%);padding:50px 24px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.08)}
 .hero-emoji{font-size:3rem;margin-bottom:8px}
 .hero h1{font-size:2.2rem;font-weight:700;margin-bottom:4px}
@@ -148,22 +148,20 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
 .slide-dots{display:flex;gap:6px;justify-content:center}
 .slide-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all 0.3s;cursor:pointer}
 .slide-dot.active{background:var(--accent);transform:scale(1.3)}
-.fill-input{padding:6px 10px;border-radius:8px;border:1.5px solid var(--border);font-size:0.85rem;font-family:inherit;width:120px}
-.fill-input:focus{outline:none;border-color:var(--accent)}
 @media(max-width:600px){.cheat-grid{grid-template-columns:1fr}.vocab-grid{grid-template-columns:1fr}.recap-grid{grid-template-columns:1fr 1fr}.expression-grid{grid-template-columns:1fr}.slide{padding:10px}}
 </style>
 </head>
 <body class="pb-80">
 
 <div class="hero">
-  <div class="hero-emoji">&#x1F3DD;</div>
-  <h1>Session 10: Deserted Island (Part 2)</h1>
-  <p class="sub">Survival Rules, Safety &amp; Hollywood Movies</p>
+  <div class="hero-emoji">&#x26A0;</div>
+  <h1>Session 10: Deserted Island Part 2</h1>
+  <p class="sub">Rules, Safety &amp; Survival Movies!</p>
   <div class="badge-row">
-    <span class="badge">&#x1F3DD; Survival Vocabulary</span>
     <span class="badge">&#x1F6AB; Negative Imperatives</span>
-    <span class="badge">&#x1F3AC; Hollywood Movies</span>
-    <span class="badge">&#x1F9ED; Island Rules</span>
+    <span class="badge">&#x1F3AC; Survival Movies</span>
+    <span class="badge">&#x1F4CB; Island Rules</span>
+    <span class="badge">&#x1F3A7; Alex&#39;s Tips</span>
   </div>
 </div>
 
@@ -202,18 +200,18 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <h2>Grammar Recap: Sessions 1&ndash;9</h2>
     <div class="recap-grid">
       <div class="recap-chip"><div class="num">S1</div><div class="topic">will / going to</div><div class="detail">Future plans</div></div>
-      <div class="recap-chip"><div class="num">S2</div><div class="topic">Past Simple</div><div class="detail">Past events</div></div>
-      <div class="recap-chip"><div class="num">S3</div><div class="topic">Count / Uncount</div><div class="detail">Quantities</div></div>
-      <div class="recap-chip"><div class="num">S4</div><div class="topic">Present Perfect</div><div class="detail">Experiences</div></div>
-      <div class="recap-chip"><div class="num">S5</div><div class="topic">Comparatives</div><div class="detail">Comparing</div></div>
-      <div class="recap-chip"><div class="num">S6</div><div class="topic">Superlatives</div><div class="detail">The most/best</div></div>
-      <div class="recap-chip"><div class="num">S7</div><div class="topic">First Conditional</div><div class="detail">If + will</div></div>
-      <div class="recap-chip"><div class="num">S8</div><div class="topic">should / have to</div><div class="detail">Advice &amp; obligation</div></div>
-      <div class="recap-chip"><div class="num">S9</div><div class="topic">What a + NP</div><div class="detail">Exclamations</div></div>
-      <div class="recap-chip recap-current"><div class="num">S10</div><div class="topic">Don't + verb</div><div class="detail">This session</div></div>
+      <div class="recap-chip"><div class="num">S2</div><div class="topic">-ing / to + inf</div><div class="detail">Verb patterns</div></div>
+      <div class="recap-chip"><div class="num">S3</div><div class="topic">some / any</div><div class="detail">Quantities</div></div>
+      <div class="recap-chip"><div class="num">S4</div><div class="topic">this / that</div><div class="detail">Demonstratives</div></div>
+      <div class="recap-chip"><div class="num">S5</div><div class="topic">Past cont.</div><div class="detail">Past events</div></div>
+      <div class="recap-chip"><div class="num">S6</div><div class="topic">very / too</div><div class="detail">Intensifiers</div></div>
+      <div class="recap-chip"><div class="num">S7</div><div class="topic">need to / want to</div><div class="detail">Needs &amp; wants</div></div>
+      <div class="recap-chip"><div class="num">S8</div><div class="topic">should / have to</div><div class="detail">Advice &amp; rules</div></div>
+      <div class="recap-chip"><div class="num">S9</div><div class="topic">What a + Noun!</div><div class="detail">Exclamations</div></div>
+      <div class="recap-chip recap-current"><div class="num">S10</div><div class="topic">Don&#39;t + verb</div><div class="detail">This session</div></div>
     </div>
     <div class="card">
-      <h3>&#x270F; Fill-in Recap Quiz (S1&ndash;S9)</h3>
+      <h3>&#x270F; Fill-in Recap Quiz (S1&ndash;S9 applied to survival)</h3>
       <div id="recap-exercises"></div>
       <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
         <button class="btn" style="background:var(--accent);color:#fff" onclick="checkRecap()">Check Answers</button>
@@ -230,62 +228,53 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
 
     <div class="card">
       <h3>&#x1F399; NLM Overview Video</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Watch this fun overview of Session 10: survival rules, negative imperatives, and Hollywood survival movies.</p>
-      <video controls style="width:100%;border-radius:12px;background:#000" preload="metadata">
-        <source src="../Session 10/[placeholder].mp4" type="video/mp4">
-      </video>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Watch this overview of Session 10: negative imperatives, survival rules, and Hollywood movies.</p>
+      <iframe src="https://drive.google.com/file/d/13amV7te6T7VcbNWJHNKWaobEePA5L1-q/preview" style="width:100%;height:400px;border:0;border-radius:12px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <div class="card">
-      <h3>&#x1F3A7; Deep Dive: Negative Imperative Sentences</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">A deep dive into negative imperative sentences.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="../Session 10/[placeholder].m4a" type="audio/mp4">
-      </audio>
+      <h3>&#x1F3A7; Deep Dive: Negative Imperatives &amp; Survival</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">A deep dive into how negative imperatives save lives in survival situations.</p>
+      <iframe src="https://drive.google.com/file/d/1i4IIuOzsSPHVZtMV51WRAxTecTx7jR4d/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
     </div>
 
     <div class="card">
-      <h3>&#x23F1; Quick Review</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Quick 3&ndash;5 minute summary before class.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="../Session 10/[placeholder].m4a" type="audio/mp4">
-      </audio>
-    </div>
-
-    <div class="card">
-      <h3>&#x1F3A7; Vocabulary Lesson (Moodle)</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Vocabulary Lesson &mdash; listen and learn the key words for this session.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="https://scemoodle.aucegypt.edu/pluginfile.php/3170074/mod_hvp/content/171789/audios/files-6827023a28273.mp3" type="audio/mpeg">
-      </audio>
+      <h3>&#x23F1; Quick Review: Shipwreck Survival</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">A quick summary of shipwreck survival and the negative imperative.</p>
+      <iframe src="https://drive.google.com/file/d/14vY2-y-F14PK-OG4aYUommJltHy653T8/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
     </div>
 
     <div class="card">
       <h3>&#x1F3A7; Listening 1: Survival Talk with Alex</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen to rules to stay safe if lost in a forest, then answer the questions.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="https://scemoodle.aucegypt.edu/pluginfile.php/3170076/mod_hvp/content/171791/audios/files-68270bc355003.mp3" type="audio/mpeg">
-      </audio>
-      <div class="mt-12" id="listen1-questions"></div>
-      <div class="mt-12" id="listen1-tf"></div>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen to Alex sharing rules to stay safe if you get lost in a forest.</p>
+      <div style="background:linear-gradient(135deg,var(--blue-light),#e8f4fd);border:1px solid var(--blue);border-radius:12px;padding:14px;text-align:center">
+        <span style="font-size:1.3rem">&#x1F3A7;</span>
+        <span style="font-size:0.85rem;color:var(--blue);font-weight:600">This listening exercise audio is available on <a href="https://scemoodle.aucegypt.edu" target="_blank" style="color:var(--accent);text-decoration:underline">Moodle</a>. Log in to listen.</span>
+      </div>
+      <div class="mt-12" id="listen1-mcq"></div>
+      <h4 style="margin:16px 0 8px;font-family:'Fredoka',sans-serif">True or False</h4>
+      <div id="listen1-tf"></div>
     </div>
 
     <div class="card">
-      <h3>&#x1F3A7; Listening 2: Survival Stories in Hollywood Movies</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen to stories about Hollywood survival movies, then answer the questions.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="https://scemoodle.aucegypt.edu/pluginfile.php/3170078/mod_hvp/content/171793/audios/files-6827797520dfc.mp3" type="audio/mpeg">
-      </audio>
-      <div class="mt-12" id="listen2-questions"></div>
-      <div class="mt-12" id="listen2-fill"></div>
-      <div class="mt-12" id="listen2-tf"></div>
+      <h3>&#x1F3AC; Listening 2: Survival Stories in Hollywood</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen about famous survival movies: Cast Away, Blue Lagoon, Life of Pi, and Swiss Family Robinson.</p>
+      <div style="background:linear-gradient(135deg,var(--blue-light),#e8f4fd);border:1px solid var(--blue);border-radius:12px;padding:14px;text-align:center">
+        <span style="font-size:1.3rem">&#x1F3A7;</span>
+        <span style="font-size:0.85rem;color:var(--blue);font-weight:600">This listening exercise audio is available on <a href="https://scemoodle.aucegypt.edu" target="_blank" style="color:var(--accent);text-decoration:underline">Moodle</a>. Log in to listen.</span>
+      </div>
+      <div class="mt-12" id="listen2-mcq"></div>
+      <h4 style="margin:16px 0 8px;font-family:'Fredoka',sans-serif">Fill in the Blanks</h4>
+      <div id="listen2-fill"></div>
+      <h4 style="margin:16px 0 8px;font-family:'Fredoka',sans-serif">True or False</h4>
+      <div id="listen2-tf"></div>
     </div>
   </div>
 
   <!-- ===== VOCAB ===== -->
   <div class="section" id="vocab">
     <span class="section-label" style="background:var(--accent-light);color:var(--accent)">&#x1F4DA; Vocabulary</span>
-    <h2>Survival Vocabulary</h2>
+    <h2>Survival &amp; Safety Vocabulary</h2>
 
     <div class="slideshow">
       <h3 style="padding:16px 16px 0;font-family:'Fredoka',sans-serif">&#x1F4CA; Vocabulary Slides</h3>
@@ -297,17 +286,12 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
       </div>
     </div>
 
-    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F451; Leadership &amp; Rules</h3>
-    <div class="vocab-grid" id="vg-leadership"></div>
-
-    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F332; Nature &amp; Dangers</h3>
-    <div class="vocab-grid" id="vg-nature"></div>
-
-    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F9ED; Survival Skills</h3>
-    <div class="vocab-grid" id="vg-survival"></div>
-
-    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F4AD; Feelings &amp; Actions</h3>
-    <div class="vocab-grid" id="vg-feelings"></div>
+    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F30A; Sea &amp; Storm</h3>
+    <div class="vocab-grid" id="vg-sea"></div>
+    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x1F3D5; Island Life</h3>
+    <div class="vocab-grid" id="vg-island"></div>
+    <h3 style="margin:20px 0 10px;font-family:'Fredoka',sans-serif">&#x26A0; Safety &amp; Rescue</h3>
+    <div class="vocab-grid" id="vg-safety"></div>
 
     <div class="card mt-20">
       <h3>&#x270F; Vocabulary Exercise</h3>
@@ -316,59 +300,23 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
       <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
         <button class="btn" style="background:var(--accent);color:#fff" onclick="checkVocabEx()">Check Answers</button>
         <button class="btn" style="background:#eee;color:var(--text)" onclick="retryVocabEx()">Retry</button>
-        <span id="vocab-result" style="font-family:'Fredoka',sans-serif;font-weight:700"></span>
+        <span id="vocab-result" style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.1rem"></span>
       </div>
     </div>
   </div>
 
   <!-- ===== IDIOMS ===== -->
   <div class="section" id="idioms">
-    <span class="section-label" style="background:rgba(251,191,36,0.15);color:#f59e0b">&#x1F4AC; Idioms</span>
+    <span class="section-label" style="background:var(--pink-light);color:var(--pink)">&#x1F4AC; Idioms</span>
     <h2>Survival Idioms</h2>
-    <p style="color:var(--text-dim);margin-bottom:18px">Common English idioms about teamwork, survival, and creative thinking. Each includes meaning, example, and Arabic hint.</p>
-    <div style="display:grid;gap:14px">
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F393; Learn the ropes</h3>
-        <p><strong>Meaning:</strong> Learn how to do something new</p>
-        <p><strong>Example:</strong> "On the island, everyone had to <em>learn the ropes</em> quickly to survive."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x064A;&#x062A;&#x0639;&#x0644;&#x0645; &#x0627;&#x0644;&#x0623;&#x0633;&#x0627;&#x0633;&#x064A;&#x0627;&#x062A;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F3F0; Hold the fort</h3>
-        <p><strong>Meaning:</strong> Take care of things while someone is away</p>
-        <p><strong>Example:</strong> "Jack told Tom to <em>hold the fort</em> while he went to find water."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x064A;&#x062D;&#x0627;&#x0641;&#x0638; &#x0639;&#x0644;&#x0649; &#x0627;&#x0644;&#x0648;&#x0636;&#x0639;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F4AA; Pull your weight</h3>
-        <p><strong>Meaning:</strong> Do your fair share of work</p>
-        <p><strong>Example:</strong> "Everyone needs to <em>pull their weight</em> if we want to survive."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x064A;&#x0628;&#x0630;&#x0644; &#x062C;&#x0647;&#x062F;&#x0647;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F332; Out of the woods</h3>
-        <p><strong>Meaning:</strong> Out of danger or difficulty</p>
-        <p><strong>Example:</strong> "After the ship rescued them, they were finally <em>out of the woods</em>."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x062E;&#x0631;&#x062C; &#x0645;&#x0646; &#x0627;&#x0644;&#x0645;&#x0634;&#x0643;&#x0644;&#x0629;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F440; Keep an eye out</h3>
-        <p><strong>Meaning:</strong> Watch carefully for something</p>
-        <p><strong>Example:</strong> "<em>Keep an eye out</em> for any ships passing by the island."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x064A;&#x0631;&#x0627;&#x0642;&#x0628; &#x0628;&#x062D;&#x0630;&#x0631;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F4C4; On the same page</h3>
-        <p><strong>Meaning:</strong> Agree or understand each other</p>
-        <p><strong>Example:</strong> "Jack made sure everyone was <em>on the same page</em> about the rules."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x0645;&#x062A;&#x0641;&#x0642;&#x064A;&#x0646;</p>
-      </div>
-      <div class="card" style="border-left:4px solid #f59e0b">
-        <h3 style="color:#f59e0b;margin-bottom:4px">&#x1F4A1; Think outside the box</h3>
-        <p><strong>Meaning:</strong> Be creative in solving problems</p>
-        <p><strong>Example:</strong> "They had to <em>think outside the box</em> to build shelters from leaves."</p>
-        <p style="color:var(--text-dim);font-size:0.85rem"><strong>Arabic:</strong> &#x064A;&#x0641;&#x0643;&#x0631; &#x0628;&#x0637;&#x0631;&#x064A;&#x0642;&#x0629; &#x0625;&#x0628;&#x062F;&#x0627;&#x0639;&#x064A;&#x0629;</p>
-      </div>
+    <div class="expression-grid">
+      <div class="expression-card"><div class="phrase">learn the ropes</div><div class="ex-meaning">Learn how to do something new</div></div>
+      <div class="expression-card"><div class="phrase">hold the fort</div><div class="ex-meaning">Take care of things while someone is away</div></div>
+      <div class="expression-card"><div class="phrase">pull your weight</div><div class="ex-meaning">Do your fair share of work</div></div>
+      <div class="expression-card"><div class="phrase">out of the woods</div><div class="ex-meaning">Out of danger or difficulty</div></div>
+      <div class="expression-card"><div class="phrase">keep an eye out</div><div class="ex-meaning">Watch carefully for something</div></div>
+      <div class="expression-card"><div class="phrase">on the same page</div><div class="ex-meaning">Agree or understand each other</div></div>
+      <div class="expression-card"><div class="phrase">think outside the box</div><div class="ex-meaning">Be creative in solving problems</div></div>
     </div>
   </div>
 
@@ -388,33 +336,22 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     </div>
 
     <div class="card">
-      <h3>&#x1F6AB; Don't + Base Verb</h3>
-      <p style="font-size:0.88rem">Use <span class="demo-word">Don't</span> + base verb to give warnings, prohibitions, rules, and negative instructions.</p>
+      <h3>&#x1F4CB; Rule: Don&#39;t + base verb</h3>
+      <p style="font-size:0.88rem;margin-bottom:12px">We use <span class="demo-word">Don&#39;t</span> + base verb to give warnings, instructions, rules, and prohibitions.</p>
       <table class="grammar-table">
-        <tr><th>Pattern</th><th>Example</th><th>Use</th></tr>
-        <tr><td>Don't + verb!</td><td><strong>Don't</strong> walk alone!</td><td>Warning</td></tr>
-        <tr><td>Don't + verb + object!</td><td><strong>Don't</strong> let the fire go out!</td><td>Rule</td></tr>
-        <tr><td>Don't + verb + object!</td><td><strong>Don't</strong> drink seawater!</td><td>Prohibition</td></tr>
-        <tr><td>Don't + verb!</td><td><strong>Don't</strong> go there!</td><td>Warning</td></tr>
-        <tr><td>Don't + verb + object!</td><td><strong>Don't</strong> leave food on the ground!</td><td>Instruction</td></tr>
-        <tr><td>Don't + verb + adverb!</td><td><strong>Don't</strong> build in the forest!</td><td>Instruction</td></tr>
+        <tr><th>Situation</th><th>Negative Imperative</th></tr>
+        <tr><td>The floor is wet</td><td><span class="demo-word">Don&#39;t</span> walk on the floor!</td></tr>
+        <tr><td>Fire is dangerous</td><td><span class="demo-word">Don&#39;t</span> touch it!</td></tr>
+        <tr><td>Food is not fresh</td><td><span class="demo-word">Don&#39;t</span> eat it!</td></tr>
+        <tr><td>River is deep</td><td><span class="demo-word">Don&#39;t</span> swim there!</td></tr>
+        <tr><td>Seawater is salty</td><td><span class="demo-word">Don&#39;t</span> drink seawater!</td></tr>
+        <tr><td>Snakes on the hill</td><td><span class="demo-word">Don&#39;t</span> go there!</td></tr>
       </table>
+      <div class="tip-box"><strong>Tip:</strong> Use negative imperatives to give rules and warnings. They are short, clear, and direct!</div>
     </div>
 
     <div class="card">
-      <h3>&#x1F4AC; Everyday Examples</h3>
-      <p style="font-size:0.88rem">Negative imperatives are used in daily life too:</p>
-      <table class="grammar-table">
-        <tr><th>Sentence</th><th>Situation</th></tr>
-        <tr><td><strong>Don't</strong> be late for class!</td><td>School</td></tr>
-        <tr><td><strong>Don't</strong> forget your homework!</td><td>School</td></tr>
-        <tr><td><strong>Don't</strong> worry about the test!</td><td>Encouragement</td></tr>
-      </table>
-      <div class="tip-box"><strong>Remember:</strong> Always use <strong>Don't + base verb</strong> (not "Not go" or "Don't to walk" or "Doesn't walk"). The subject "you" is hidden/understood.</div>
-    </div>
-
-    <div class="card">
-      <h3>&#x270F; Grammar Exercises</h3>
+      <h3>&#x270F; Grammar Exercise: Complete with negative imperative</h3>
       <div id="grammar-exercises"></div>
       <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
         <button class="btn" style="background:var(--green);color:#fff" onclick="checkGrammar()">Check Answers</button>
@@ -427,34 +364,32 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
   <!-- ===== READING ===== -->
   <div class="section" id="reading">
     <span class="section-label" style="background:var(--pink-light);color:var(--pink)">&#x1F4D6; Reading</span>
-    <h2>Captain Jack and the Island Story</h2>
-
-    <div class="card">
-      <div style="font-size:0.9rem;line-height:1.9">
-        <p><span class="highlight" data-q="rq1">Jack was the captain of a small boat, sailing with his crew and a few passengers. One sunny morning, a sudden storm rolled in. Huge waves rocked the boat until it finally sank. Jack and a group of survivors swam to a desert island.</span> The island had beautiful palm trees, white sand, and a clear blue sea, but they were far from home and needed to stay alive.</p>
-        <p style="margin-top:12px">As the captain, Jack became the leader. He gathered everyone and said, "We will be ok if we work together. But, we need some rules to stay safe." Jack wrote the rules on a large piece of wood and explained them one by one:</p>
-        <p style="margin-top:12px"><strong>Stay together.</strong> "We must work as a team to survive. Don't walk alone!" Jack said firmly.</p>
-        <p style="margin-top:12px"><strong>Keep the fire burning.</strong> Jack pointed to the small fire they had started on the beach. "This will keep us warm and safe. Don't let it go out!"</p>
-        <p style="margin-top:12px"><strong>Drink only clean water.</strong> <span class="highlight" data-q="rq2">Jack showed them a small stream in the east.</span> "This water is fresh. Don't drink seawater; it will make you sick!"</p>
-        <p style="margin-top:12px"><strong>Avoid the south hill.</strong> <span class="highlight" data-q="rq3">"There are snakes on the south hill," Jack warned.</span> "Don't go there!"</p>
-        <p style="margin-top:12px"><strong>Store food properly.</strong> Jack held up some big leaves. "Wrap the fruit and fish in these. Don't leave food on the ground; it will attract animals!"</p>
-        <p style="margin-top:12px"><strong>Build shelters near the beach.</strong> Jack explained, "The beach is flat and safe. Don't build in the forest; it's too dark and full of insects!"</p>
-        <p style="margin-top:12px"><strong>Signal for help.</strong> <span class="highlight" data-q="rq4">Jack encouraged them to use smoke from the fire and to arrange big rocks in an SOS shape on the sand.</span></p>
-        <p style="margin-top:12px">The group worked hard, following Jack's rules. Slowly, they learned how to live on the island. One evening, while sitting around the fire, someone saw a light in the sky.</p>
-        <p style="margin-top:12px">"It's a ship!" shouted one of the passengers. Everyone jumped up, waving and shouting. Thanks to Jack's leadership and their SOS signal, the ship saw them and came to their rescue.</p>
-        <p style="margin-top:12px">Jack and the group left the island feeling proud of their teamwork and thankful for the captain who kept them safe.</p>
-      </div>
+    <h2>Captain Jack and the Island</h2>
+    <div class="card" style="line-height:1.9;font-size:0.9rem">
+      <p><span class="highlight" data-q="q1">Jack was the captain of a small boat, sailing with his crew and a few passengers. One sunny morning, a sudden storm rolled in. Huge waves rocked the boat until it finally sank. Jack and a group of survivors swam to a desert island.</span></p>
+      <p style="margin-top:10px"><span class="highlight" data-q="q2">The island had beautiful palm trees, white sand, and a clear blue sea, but they were far from home and needed to stay alive.</span></p>
+      <p style="margin-top:10px"><span class="highlight" data-q="q3">As the captain, Jack became the leader. He gathered everyone and said, &ldquo;We will be ok if we work together. But, we need some rules to stay safe.&rdquo;</span></p>
+      <p style="margin-top:10px">Jack wrote the rules on a large piece of wood:</p>
+      <p style="margin-top:8px"><strong>1.</strong> Stay together. &ldquo;<strong>Don&#39;t</strong> walk alone!&rdquo;</p>
+      <p><strong>2.</strong> Keep the fire burning. &ldquo;<strong>Don&#39;t</strong> let it go out!&rdquo;</p>
+      <p><strong>3.</strong> Drink only clean water. &ldquo;<strong>Don&#39;t</strong> drink seawater; it will make you sick!&rdquo;</p>
+      <p><strong>4.</strong> Avoid the south hill. &ldquo;<strong>Don&#39;t</strong> go there!&rdquo; (snakes)</p>
+      <p><strong>5.</strong> Store food properly. &ldquo;<strong>Don&#39;t</strong> leave food on the ground!&rdquo;</p>
+      <p><strong>6.</strong> Build shelters near the beach. &ldquo;<strong>Don&#39;t</strong> build in the forest!&rdquo;</p>
+      <p style="margin-top:10px"><span class="highlight" data-q="q4">The group worked hard, following Jack&#39;s rules. One evening, someone saw a light &mdash; &ldquo;It&#39;s a ship!&rdquo; Thanks to Jack&#39;s leadership and their SOS signal, the ship saw them and came to their rescue.</span></p>
     </div>
 
     <div class="card">
-      <h3>&#x2753; Reading Questions</h3>
+      <h3>&#x270F; Reading Questions (MCQ)</h3>
       <div id="reading-questions"></div>
-      <div id="readingMistakes" class="hidden mt-12" style="background:var(--red-light);border-radius:12px;padding:16px"><h4 style="color:var(--red);font-family:'Fredoka',sans-serif;margin-bottom:8px">Review These:</h4><div id="mistakesList"></div></div>
     </div>
-
     <div class="card">
-      <h3>&#x2753; True or False</h3>
+      <h3>&#x270F; True or False</h3>
       <div id="reading-tf"></div>
+    </div>
+    <div class="card hidden" id="readingMistakes" style="border:2px solid var(--red);background:var(--red-light)">
+      <h3 style="color:var(--red)">&#x274C; Mistakes to Review</h3>
+      <div id="mistakesList"></div>
     </div>
   </div>
 
@@ -462,35 +397,11 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
   <div class="section" id="speaking">
     <span class="section-label" style="background:var(--orange-light);color:var(--orange)">&#x1F5E3; Speaking</span>
     <h2>Speaking Practice</h2>
-
     <div class="challenge-box">
       <h3>&#x23F1; 1-Minute Challenge</h3>
-      <p style="margin:8px 0;font-size:0.9rem">Talk for 1 minute about: <strong>"Imagine you are the leader of a group stuck on a desert island. What 3 rules would you give? Use negative imperatives: Don't..."</strong></p>
-      <p style="font-size:0.82rem;color:var(--text-dim)">Use: "First, don't..." / "Also, never..." / "Most importantly, don't..."</p>
-    </div>
-
-    <div class="card">
-      <h3>&#x1F4AC; Useful Expressions</h3>
-      <div class="expression-grid">
-        <div class="expression-card"><div class="phrase">First, don't...</div><div class="ex-meaning">Start with your first rule</div></div>
-        <div class="expression-card"><div class="phrase">Also, never...</div><div class="ex-meaning">Add another important rule</div></div>
-        <div class="expression-card"><div class="phrase">Most importantly, don't...</div><div class="ex-meaning">Share the most critical rule</div></div>
-        <div class="expression-card"><div class="phrase">I think the most important rule is...</div><div class="ex-meaning">Give your opinion on rules</div></div>
-        <div class="expression-card"><div class="phrase">In my opinion, you should never...</div><div class="ex-meaning">Express a strong opinion</div></div>
-        <div class="expression-card"><div class="phrase">If I were on an island, I would...</div><div class="ex-meaning">Talk about what you'd do</div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>&#x1F4AC; Daily Drill</h3>
-      <p style="font-size:0.88rem;margin-bottom:8px">Describe your favorite survival movie and what you learned from it. Practice saying these sentences out loud:</p>
-      <div style="font-size:0.88rem;line-height:2">
-        <p>1. "My favorite survival movie is..."</p>
-        <p>2. "The main character had to <strong>survive</strong> by..."</p>
-        <p>3. "I learned that you should <strong>never give up</strong>."</p>
-        <p>4. "<strong>Don't</strong> forget to stay calm in dangerous situations."</p>
-        <p>5. "The most important lesson was: <strong>Don't</strong> lose hope."</p>
-      </div>
+      <p style="margin-top:8px;font-size:0.88rem">You are Captain Jack. Tell your crew the survival rules using negative imperatives.</p>
+      <p style="font-size:0.82rem;color:var(--text-dim);margin-top:6px">Use: &ldquo;Don&#39;t walk alone!&rdquo; &ldquo;Don&#39;t drink seawater!&rdquo; &ldquo;Don&#39;t leave food on the ground!&rdquo;</p>
+      <div style="margin-top:14px"><button class="btn" style="background:var(--accent);color:#fff;padding:10px 24px;font-size:1rem" onclick="startTimer(this)">&#x25B6; Start Timer</button><span id="timer-display" style="font-family:'Fredoka',sans-serif;font-size:1.8rem;font-weight:700;color:var(--accent);margin-left:16px">60s</span></div>
     </div>
   </div>
 
@@ -499,41 +410,50 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <span class="section-label" style="background:var(--green-light);color:var(--green)">&#x1F3AD; Roleplay</span>
     <h2>Roleplay Scenarios</h2>
 
-    <div class="role-card" onclick="toggleRole('r1')">
-      <h4>&#x1F3DD; Scenario 1: Island Leader</h4>
-      <ul class="role-points"><li>You are the leader of a group on a desert island</li><li>Give rules to your group using negative imperatives</li><li>Your partner plays a group member asking questions</li></ul>
-      <div class="role-convo" id="r1-convo">
-        <p><strong>You (Leader):</strong> Listen everyone! We need rules to survive. First, <strong>don't walk alone</strong> at night. It's too dangerous.</p>
-        <p><strong>Member:</strong> What about water? Can we drink from the sea?</p>
-        <p><strong>You:</strong> No! <strong>Don't drink seawater!</strong> It will make you sick. We found a stream in the east. Use that.</p>
-        <p><strong>Member:</strong> What about food?</p>
-        <p><strong>You:</strong> <strong>Don't leave food on the ground!</strong> Wrap it in big leaves. And <strong>don't go</strong> to the south hill &mdash; there are snakes there!</p>
-        <p><strong>Member:</strong> You're a great leader. We feel safe with these rules.</p>
+    <div class="role-card" onclick="toggleRole('rp1')">
+      <h4>&#x1F30A; Scenario 1: Island Leader</h4>
+      <ul class="role-points">
+        <li>You are the leader of the group on a deserted island</li>
+        <li>Give 5 survival rules using negative imperatives</li>
+        <li>Explain why each rule is important</li>
+      </ul>
+      <div class="role-convo" id="rp1-convo">
+        <p><strong>You (Leader):</strong> Listen everyone! Don&#39;t walk alone in the forest &mdash; there might be dangerous animals.</p>
+        <p><strong>Crew:</strong> Ok, what else?</p>
+        <p><strong>You:</strong> Don&#39;t drink seawater! It will make you very sick. Only drink from the stream.</p>
+        <p><strong>Crew:</strong> What about food?</p>
+        <p><strong>You:</strong> Don&#39;t leave food on the ground. Wrap it in leaves. And don&#39;t go to the south hill &mdash; there are snakes!</p>
       </div>
     </div>
 
-    <div class="role-card" onclick="toggleRole('r2')">
-      <h4>&#x1F3AC; Scenario 2: Survival Movie Discussion</h4>
-      <ul class="role-points"><li>Discuss your favorite survival movie with a friend</li><li>Your partner suggests a movie too</li><li>Use vocabulary from the session</li></ul>
-      <div class="role-convo" id="r2-convo">
-        <p><strong>You:</strong> Have you seen Cast Away? It's about a man who survives alone on an island.</p>
-        <p><strong>Friend:</strong> Yes! He talks to a volleyball named Wilson. What about Life of Pi?</p>
-        <p><strong>You:</strong> That's amazing! Pi is stuck on a boat with a tiger. He had to <strong>survive</strong> by catching fish and collecting rainwater.</p>
-        <p><strong>Friend:</strong> I think Swiss Family Robinson is great too. The family builds a huge treehouse!</p>
-        <p><strong>You:</strong> All these movies teach us that <strong>teamwork</strong> and <strong>creativity</strong> are important for survival.</p>
+    <div class="role-card" onclick="toggleRole('rp2')">
+      <h4>&#x1F3AC; Scenario 2: Movie Discussion</h4>
+      <ul class="role-points">
+        <li>Discuss your favorite survival movie with a friend</li>
+        <li>Describe what the characters did to survive</li>
+        <li>Use vocabulary: survive, rescue, shelter, crew, teamwork</li>
+      </ul>
+      <div class="role-convo" id="rp2-convo">
+        <p><strong>You:</strong> Have you watched Cast Away? The main character survives alone on an island!</p>
+        <p><strong>Friend:</strong> Yes! He talks to a volleyball named Wilson. What a lonely experience!</p>
+        <p><strong>You:</strong> He had to learn the ropes of survival &mdash; finding food, making fire, and building shelter.</p>
+        <p><strong>Friend:</strong> The rescue at the end was amazing. He never gave up!</p>
       </div>
     </div>
 
-    <div class="role-card" onclick="toggleRole('r3')">
-      <h4>&#x1F4FB; Scenario 3: Rescue Call</h4>
-      <ul class="role-points"><li>You found a radio on the island</li><li>Call for help describing your situation</li><li>Your partner plays the rescue team</li></ul>
-      <div class="role-convo" id="r3-convo">
-        <p><strong>You:</strong> Mayday! Mayday! This is a survivor on a desert island. Can anyone hear me?</p>
-        <p><strong>Rescue:</strong> We hear you! What is your situation?</p>
-        <p><strong>You:</strong> Our boat sank in a storm. There are six survivors. We built shelters on the beach and we have a fire burning for signal.</p>
-        <p><strong>Rescue:</strong> Stay calm. Can you see any landmarks?</p>
-        <p><strong>You:</strong> Yes, there are palm trees and a hill to the south. We arranged rocks in an SOS shape on the sand. Please hurry!</p>
-        <p><strong>Rescue:</strong> We're sending a ship your way. <strong>Don't leave</strong> the beach! Stay near your signal fire.</p>
+    <div class="role-card" onclick="toggleRole('rp3')">
+      <h4>&#x1F3D5; Scenario 3: Forest Safety</h4>
+      <ul class="role-points">
+        <li>You are a guide teaching someone forest safety rules</li>
+        <li>Give warnings using &ldquo;Don&#39;t...&rdquo;</li>
+        <li>Use idioms: keep an eye out, out of the woods, think outside the box</li>
+      </ul>
+      <div class="role-convo" id="rp3-convo">
+        <p><strong>You (Guide):</strong> Welcome to the forest! First rule: don&#39;t wander off the path.</p>
+        <p><strong>Hiker:</strong> What about animals?</p>
+        <p><strong>You:</strong> Keep an eye out for tracks and strange noises. Don&#39;t approach wild animals!</p>
+        <p><strong>Hiker:</strong> What if I get lost?</p>
+        <p><strong>You:</strong> Don&#39;t panic! Stay calm and think outside the box. Start a fire for warmth and as a signal.</p>
       </div>
     </div>
   </div>
@@ -543,75 +463,84 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <span class="section-label" style="background:var(--blue-light);color:var(--blue)">&#x1F4E7; Email</span>
     <h2>Email Writing</h2>
     <div class="card">
-      <h3>&#x2709; Write an email to a friend about a survival experience</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">Write an email to your friend about a survival experience (real or imagined). Use negative imperatives and survival vocabulary. (60&ndash;80 words)</p>
-      <textarea class="writing-area" id="email-area" placeholder="Dear [friend's name],&#10;&#10;You won't believe what happened to me!..." oninput="updateEmailWC()"></textarea>
-      <div class="word-count">Words: <span id="email-wc">0</span> / 60&ndash;80</div>
+      <h3>&#x270F; Write an Email</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">Write an email to your friend warning them about safety rules before a camping trip. Use at least 4 negative imperatives (Don&#39;t...).</p>
+      <textarea class="writing-area" id="email-area" placeholder="Dear [friend's name],&#10;&#10;I'm writing to give you some safety tips for our camping trip..." oninput="updateEmailWC()"></textarea>
+      <div class="word-count">Words: <span id="email-wc">0</span></div>
       <div class="checklist mt-12" id="email-checklist">
-        <label><input type="checkbox" onchange="updateEmailCheck()"> Used negative imperatives (Don't...)</label>
-        <label><input type="checkbox" onchange="updateEmailCheck()"> Used survival vocabulary</label>
-        <label><input type="checkbox" onchange="updateEmailCheck()"> Described the experience</label>
-        <label><input type="checkbox" onchange="updateEmailCheck()"> Used at least 3 island words</label>
-        <label><input type="checkbox" onchange="updateEmailCheck()"> Included greeting and sign-off</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> Greeting (Dear...)</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> At least 4 negative imperatives</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> Explains why for each rule</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> Mentions what to bring</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> Safety vocabulary used</label>
+        <label><input type="checkbox" onchange="updateEmailCheck()"> Sign-off (Best wishes / See you soon)</label>
       </div>
-      <p id="email-check-result" style="font-size:0.85rem;font-weight:600;margin-top:8px"></p>
+      <span id="email-check-result" style="font-size:0.85rem;font-weight:600;margin-top:8px;display:block"></span>
     </div>
   </div>
 
   <!-- ===== WRITING ===== -->
   <div class="section" id="writing">
-    <span class="section-label" style="background:var(--pink-light);color:var(--pink)">&#x270F; Writing</span>
+    <span class="section-label" style="background:var(--green-light);color:var(--green)">&#x270F; Writing</span>
     <h2>Writing Practice</h2>
     <div class="card">
-      <h3>&#x1F4DD; What would you do on a desert island?</h3>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">Write a short paragraph (60&ndash;80 words) about what you would do if you were stuck on a desert island. Include at least 3 negative imperatives.</p>
-      <textarea class="writing-area" id="writing-area" placeholder="If I were stuck on a desert island, the first thing I would do is..." oninput="updateWritingWC()"></textarea>
-      <div class="word-count">Words: <span id="writing-wc">0</span> / 60&ndash;80</div>
+      <h3>&#x1F4DD; Survival Rules Poster</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">Imagine you are Captain Jack. Write 6 survival rules for your island group. Use negative imperatives and explain each rule. (No assessment for this session)</p>
+      <textarea class="writing-area" id="writing-area" placeholder="Captain Jack's Island Rules:&#10;&#10;Rule 1: Don't walk alone in the forest because..." oninput="updateWritingWC()"></textarea>
+      <div class="word-count">Words: <span id="writing-wc">0</span></div>
       <div class="checklist mt-12" id="writing-checklist">
-        <label><input type="checkbox" onchange="updateWritingCheck()"> Used at least 3 negative imperatives</label>
-        <label><input type="checkbox" onchange="updateWritingCheck()"> Used survival vocabulary</label>
-        <label><input type="checkbox" onchange="updateWritingCheck()"> Used complete sentences</label>
-        <label><input type="checkbox" onchange="updateWritingCheck()"> Explained what you would do</label>
-        <label><input type="checkbox" onchange="updateWritingCheck()"> 60&ndash;80 words</label>
+        <label><input type="checkbox" onchange="updateWritingCheck()"> At least 6 rules with Don&#39;t...</label>
+        <label><input type="checkbox" onchange="updateWritingCheck()"> Each rule has an explanation</label>
+        <label><input type="checkbox" onchange="updateWritingCheck()"> Uses survival vocabulary</label>
+        <label><input type="checkbox" onchange="updateWritingCheck()"> Clear and organized</label>
+        <label><input type="checkbox" onchange="updateWritingCheck()"> 80+ words</label>
       </div>
-      <p id="writing-check-result" style="font-size:0.85rem;font-weight:600;margin-top:8px"></p>
+      <span id="writing-check-result" style="font-size:0.85rem;font-weight:600;margin-top:8px;display:block"></span>
     </div>
   </div>
 
   <!-- ===== QUIZ ===== -->
   <div class="section" id="quiz">
     <span class="section-label" style="background:var(--red-light);color:var(--red)">&#x1F3AF; Quiz</span>
-    <h2>Session 10 Quiz</h2>
+    <h2>Session 10 Quiz (20 Questions)</h2>
     <div id="quiz-container"></div>
-    <div style="text-align:center;margin-top:16px">
-      <button class="btn" style="background:var(--accent);color:#fff;font-size:1rem;padding:12px 30px" onclick="showQuizScore()">Show Final Score</button>
-      <button class="btn" style="background:#eee;color:var(--text);font-size:1rem;padding:12px 30px" onclick="retryQuiz()">Retry Quiz</button>
+    <div style="margin-top:20px;text-align:center">
+      <button class="btn" style="background:var(--accent);color:#fff;padding:12px 30px;font-size:1rem" onclick="showQuizScore()">Show My Score</button>
+      <button class="btn" style="background:#eee;color:var(--text);padding:12px 30px;font-size:1rem;margin-left:10px" onclick="retryQuiz()">Retry Quiz</button>
     </div>
-    <div id="quiz-final" class="hidden card mt-16 text-center" style="border:3px solid var(--accent)"></div>
+    <div class="card mt-16 hidden" id="quiz-final" style="text-align:center;border:2px solid var(--border)"></div>
   </div>
 
   <!-- ===== SUMMARY ===== -->
   <div class="section" id="summary">
-    <span class="section-label" style="background:var(--yellow-light);color:#b8860b">&#x1F4CB; Summary</span>
-    <h2>Quick Cheat Sheet</h2>
+    <span class="section-label" style="background:var(--accent-light);color:var(--accent)">&#x1F4CB; Cheat Sheet</span>
+    <h2>Quick Reference</h2>
     <div class="cheat-grid">
       <div class="cheat-cell">
-        <h4>&#x1F6AB; Grammar Rules</h4>
-        <p style="font-size:0.82rem">Don't + base verb = negative imperative<br>Use for warnings, rules, prohibitions.<br><em>"Don't walk alone!"</em><br><em>"Don't drink seawater!"</em></p>
+        <h4>&#x1F6AB; Negative Imperative</h4>
+        <p style="font-size:0.82rem">Don&#39;t + base verb (+ object)<br><em>"Don&#39;t walk alone!"</em><br><em>"Don&#39;t drink seawater!"</em><br><em>"Don&#39;t leave food on the ground!"</em></p>
       </div>
       <div class="cheat-cell">
-        <h4>&#x1F4AC; Useful Expressions</h4>
-        <p style="font-size:0.82rem">Don't worry!<br>Don't forget...<br>Don't be late!<br>Don't give up!</p>
+        <h4>&#x26A0; When to Use</h4>
+        <p style="font-size:0.82rem">Warnings, rules, instructions, prohibitions<br><em>"Don&#39;t touch the fire!"</em><br><em>"Don&#39;t go near the snakes!"</em></p>
+      </div>
+      <div class="cheat-cell">
+        <h4>&#x1F30A; Key Vocabulary</h4>
+        <p style="font-size:0.82rem">captain, crew, storm, survivors, shelter, stream, signal, SOS, rescue, teamwork, wrap, palm trees, fire, snakes</p>
+      </div>
+      <div class="cheat-cell">
+        <h4>&#x1F5E3; Speaking Rescue Phrases</h4>
+        <p style="font-size:0.82rem">"Don&#39;t..." &bull; "You must..." &bull; "It&#39;s important to..." &bull; "Be careful of..." &bull; "Make sure you..."</p>
       </div>
     </div>
     <div class="cheat-grid mt-12">
       <div class="cheat-cell">
-        <h4>&#x1F5E3; Speaking Rescue Phrases</h4>
-        <p style="font-size:0.82rem">"I think the most important rule is..."<br>"In my opinion, you should never..."<br>"If I were on an island, I would..."</p>
+        <h4>&#x274C; Common Mistakes</h4>
+        <p style="font-size:0.82rem">&#x2717; "Don&#39;t to walk" &rarr; &#x2713; "Don&#39;t walk"<br>&#x2717; "Don&#39;t walks" &rarr; &#x2713; "Don&#39;t walk"<br>&#x2717; "Not drink water" &rarr; &#x2713; "Don&#39;t drink water"</p>
       </div>
       <div class="cheat-cell">
-        <h4>&#x26A0; Common Mistakes</h4>
-        <p style="font-size:0.82rem">&#x2717; "Not go there" &rarr; &#x2713; "Don't go there"<br>&#x2717; "Don't to walk" &rarr; &#x2713; "Don't walk"<br>&#x2717; "Doesn't walk" &rarr; &#x2713; "Don't walk"</p>
+        <h4>&#x1F501; Previous Grammar</h4>
+        <p style="font-size:0.82rem">S1: will/going to &bull; S2: -ing/to+inf &bull; S3: some/any &bull; S4: this/that &bull; S5: past cont. &bull; S6: very/too &bull; S7: need to/want to &bull; S8: should/have to &bull; S9: What a+Noun!</p>
       </div>
     </div>
   </div>
@@ -648,16 +577,15 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
   <div class="section">
     <span class="section-label" style="background:var(--blue-light);color:var(--blue)">&#x1F52E; Coming Next</span>
     <h2>Session 11: Preview</h2>
-    <div class="card" style="background:linear-gradient(135deg,var(--green-light),var(--blue-light))"><h4 style="font-family:'Fredoka',sans-serif;color:var(--blue);margin-bottom:6px">&#x1F3A8; Session 11: Colors &amp; Patterns</h4><p style="font-size:0.88rem">Describing clothes, adjective order, and fashion vocabulary!</p><p style="font-size:0.88rem;margin-top:6px;color:var(--text-dim)"><em>Keep practicing your survival vocabulary and negative imperatives!</em></p></div>
+    <div class="card" style="background:linear-gradient(135deg,var(--pink-light),var(--blue-light))"><h4 style="font-family:'Fredoka',sans-serif;color:var(--blue);margin-bottom:6px">&#x1F455; Session 11: Clothes &amp; Fashion</h4><p style="font-size:0.88rem">Learn clothing vocabulary, plural nouns, and what to wear for different occasions!</p><p style="font-size:0.88rem;margin-top:6px;color:var(--text-dim)"><em>Keep practicing your negative imperatives and survival vocabulary!</em></p></div>
   </div>
 
   <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0 20px">
     <a href="session-9.html" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--blue);color:#fff;border-radius:14px;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:0.9rem">&#x2B05; Session 9</a>
     <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--accent);color:#fff;border-radius:14px;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:0.9rem">&#x1F3E0; Home</a>
-    <a href="kahoot-session10.html" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--green);color:#fff;border-radius:14px;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:0.9rem">&#x1F3AE; Kahoot</a>
-    <a href="#" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--border);color:var(--text-dim);border-radius:14px;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:0.9rem">Session 11 (Soon) &#x27A1;</a>
+    <a href="session-11.html" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--green);color:#fff;border-radius:14px;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:0.9rem">Session 11 &#x27A1;</a>
   </div>
-  <div style="text-align:center;padding:10px 20px 20px;color:var(--text-dim);font-size:0.78rem"><p>AUC English A2A &bull; Session 10: Deserted Island (Part 2)</p></div>
+  <div style="text-align:center;padding:10px 20px 20px;color:var(--text-dim);font-size:0.78rem"><p>AUC English A2A &bull; Session 10: Deserted Island Part 2</p></div>
 </div>
 
 <div class="score-banner">
@@ -668,95 +596,90 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
 </div>
 
 <script>
+const driveMap_Island_Survival_Grammar_page={"0001":"1kF1AT2epA9rG6bznDjVwWTSMBUOPdug1","0002":"1JkzlGUf_k88PB-gnRcAjYd9CGz1d3I_m","0003":"17Ad4gbuZ5DbSpKUdXpw0jpXrzfn5FI1O","0004":"1rSxX1Moa_R0SlMh0NzugG7tpnhHTc3as","0005":"1zFe2RSItDO6gj4IJ_5t60He5t7LpUTW6","0006":"1f6G4ErI6MJDR1i7nvDmFEg3CbFU7QY7R","0007":"13r_wCJEkun0eDHBOl_mZq6gcJkJzIsek","0008":"1ZEw6yAndXK8PtY1TMyLxbbBjnrRH_vdn","0009":"1Z9UOn-HWrhM5OW4mYT_KaGiidGULZWGE","0010":"1lFvKYeU5e-u0-Tf600uPnngs68Hj-tTh","0011":"1ZFGsybUIJfZsfoXaT53ohQrA7VdPMymD"};
+const driveMap_Island_Survival_Vocabulary_page={"0001":"1OYVoIOlqNdhidksJcQr0Nhez4wOWZxct","0002":"18VLb1ExDX2U_DLi7QTasHoJdIyndTyfB","0003":"1Q80KEHwiqD3zYejwAeak8VWf6uFIocyG","0004":"1iJNUkJgEh-rGUnDLfaip3VxB5j_0q3es","0005":"14xi2-TczUhsO411S4T8gBFv6XdVBbKk4","0006":"1xegSCNSQwBmjqoe7UnZAUEeTzzssnt38","0007":"1OYHnfD7gEtlxvyLzLu42bVzLYhaI4fmU","0008":"1VJDvBw2Bo2g1bvBQL-g2NqV2nba3MWRX","0009":"1zuaHmEjUhznHtauBr2jupB8gS9XDAfK9","0010":"1uwW8RCnL65HfNly6_fAH41a9tk5R7m4h","0011":"1nboXP5Q-2xkj_tM2z0MhO-EtZP5agvnD","0012":"1ceYkEmSFtNzTUviyIZNYJ_GEEqAB9VGn","0013":"1xrabh_qJ0HstWK-WZLlKtBoADiWYtXfJ","0014":"1DUn3WPLVSG3tmFOgYIeKfkozoA1_-Dk6"};
+
 function speak(w,b){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w);u.lang='en-US';u.rate=0.85;const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith('en'));if(v)u.voice=v;if(b){b.classList.add('playing');u.onend=()=>b.classList.remove('playing')}speechSynthesis.speak(u)}
 if('speechSynthesis' in window)speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
 
-const leadershipVocab=[
-{w:"captain",p:"noun",m:"The person in charge of a ship or team",ar:"قائد / كابتن",ex:"Jack was the captain of the small boat."},
-{w:"crew",p:"noun",m:"The people who work on a ship",ar:"طاقم",ex:"The crew helped Jack sail the boat."},
-{w:"passengers",p:"noun",m:"People traveling on a ship, plane, or bus",ar:"ركاب",ex:"There were a few passengers on the boat."},
-{w:"leader",p:"noun",m:"A person who guides or directs others",ar:"قائد",ex:"Jack became the leader of the group."},
-{w:"rules",p:"noun",m:"Instructions that tell you what to do or not do",ar:"قواعد",ex:"Jack wrote the rules on a piece of wood."},
-{w:"teamwork",p:"noun",m:"Working together as a group",ar:"عمل جماعي",ex:"Their teamwork helped them survive on the island."}
+const seaVocab=[
+{w:"captain",p:"noun",m:"The leader of a ship or boat",ar:"قبطان",ex:"Jack was the captain of the small boat."},
+{w:"crew",p:"noun",m:"The group of people who work on a ship",ar:"طاقم",ex:"The crew helped sail the boat through the storm."},
+{w:"passengers",p:"noun",m:"People traveling on a ship, plane, or bus",ar:"ركاب",ex:"The passengers were scared during the storm."},
+{w:"storm",p:"noun",m:"Very bad weather with strong wind and rain",ar:"عاصفة",ex:"A sudden storm rolled in and sank the boat."},
+{w:"waves",p:"noun",m:"Moving water on the surface of the sea",ar:"أمواج",ex:"Huge waves rocked the boat until it sank."},
+{w:"sank",p:"verb",m:"Past tense of sink - went under water",ar:"غرقت",ex:"The boat hit rocks and sank quickly."},
+{w:"survivors",p:"noun",m:"People who stay alive after a dangerous event",ar:"ناجون",ex:"The survivors swam to a desert island."},
+{w:"seawater",p:"noun",m:"Salty water from the sea",ar:"ماء البحر",ex:"Don't drink seawater - it will make you sick!"}
 ];
-const natureVocab=[
-{w:"storm",p:"noun",m:"Very bad weather with wind and rain",ar:"عاصفة",ex:"A sudden storm rolled in that morning."},
-{w:"waves",p:"noun",m:"Moving water on the surface of the sea",ar:"أمواج",ex:"Huge waves rocked the boat."},
-{w:"palm trees",p:"noun",m:"Tropical trees with large leaves at the top",ar:"نخيل",ex:"The island had beautiful palm trees."},
-{w:"sand",p:"noun",m:"Tiny grains found on beaches",ar:"رمل",ex:"The island had white sand and a blue sea."},
-{w:"snakes",p:"noun",m:"Long reptiles without legs",ar:"ثعابين",ex:"There are snakes on the south hill."},
-{w:"insects",p:"noun",m:"Small animals like flies and mosquitoes",ar:"حشرات",ex:"The forest is full of insects."},
-{w:"forest",p:"noun",m:"A large area with many trees",ar:"غابة",ex:"Don't build in the forest; it's too dark."},
-{w:"stream",p:"noun",m:"A small narrow river",ar:"جدول ماء",ex:"Jack showed them a small stream in the east."},
-{w:"sea",p:"noun",m:"A large body of salt water",ar:"بحر",ex:"The island had a clear blue sea."}
+const islandVocab=[
+{w:"palm trees",p:"noun",m:"Tall tropical trees with big leaves at the top",ar:"أشجار النخيل",ex:"The island had beautiful palm trees and white sand."},
+{w:"stream",p:"noun",m:"A small river of fresh water",ar:"جدول",ex:"Jack found a stream with clean fresh water."},
+{w:"shelter",p:"noun",m:"A place that protects you from weather",ar:"مأوى",ex:"They built shelters near the beach to stay safe."},
+{w:"fire",p:"noun",m:"Hot bright flames when something burns",ar:"نار",ex:"Keep the fire burning - don't let it go out!"},
+{w:"snakes",p:"noun",m:"Long animals without legs that can be dangerous",ar:"ثعابين",ex:"Don't go to the south hill - there are snakes!"},
+{w:"leaves",p:"noun",m:"The flat green parts of a tree or plant",ar:"أوراق الشجر",ex:"Wrap the food in leaves to keep it clean."},
+{w:"tracks",p:"noun",m:"Marks on the ground left by animals or people",ar:"آثار",ex:"Strange tracks on the ground can mean danger."},
+{w:"calm",p:"adj",m:"Quiet and peaceful; not worried",ar:"هادئ",ex:"Stay calm and follow the survival rules."}
 ];
-const survivalVocab=[
-{w:"shelter",p:"noun",m:"A place that protects you from weather",ar:"مأوى",ex:"Build shelters near the beach."},
-{w:"fire",p:"noun",m:"Burning flames for warmth or signal",ar:"نار",ex:"Don't let the fire go out!"},
-{w:"signal",p:"noun",m:"A sign to communicate or ask for help",ar:"إشارة",ex:"Use smoke as a signal for help."},
-{w:"smoke",p:"noun",m:"The grey cloud that comes from fire",ar:"دخان",ex:"They used smoke from the fire to signal."},
-{w:"SOS",p:"noun",m:"An emergency call for help",ar:"نداء استغاثة",ex:"They arranged rocks in an SOS shape."},
-{w:"rescue",p:"verb",m:"To save someone from danger",ar:"ينقذ",ex:"The ship came to their rescue."},
-{w:"survive",p:"verb",m:"To stay alive in a dangerous situation",ar:"ينجو",ex:"They had to survive on the island."},
-{w:"wrap",p:"verb",m:"To cover something by folding material around it",ar:"يلف",ex:"Wrap the fruit in big leaves."},
-{w:"leaves",p:"noun",m:"The flat green parts of a plant or tree",ar:"أوراق شجر",ex:"They used big leaves to wrap food."},
-{w:"rainwater",p:"noun",m:"Water that falls from the sky as rain",ar:"ماء مطر",ex:"Collecting rainwater is a good way to find clean water."}
-];
-const feelingsVocab=[
-{w:"danger",p:"noun",m:"A situation where something bad might happen",ar:"خطر",ex:"There was danger everywhere on the island."},
-{w:"calm",p:"adj",m:"Relaxed and not worried",ar:"هادئ",ex:"Stay calm and follow the rules."},
-{w:"lost",p:"adj",m:"Not knowing where you are",ar:"تائه",ex:"If you're lost, stay in one place."},
-{w:"brave",p:"adj",m:"Not afraid of danger",ar:"شجاع",ex:"The survivors were very brave."},
-{w:"afraid",p:"adj",m:"Feeling fear or worry",ar:"خائف",ex:"Pi was afraid of the tiger at first."},
-{w:"proud",p:"adj",m:"Feeling happy about an achievement",ar:"فخور",ex:"They left the island feeling proud."},
-{w:"thankful",p:"adj",m:"Feeling grateful",ar:"ممتن",ex:"They were thankful for Jack's leadership."}
+const safetyVocab=[
+{w:"rules",p:"noun",m:"Instructions about what you must or must not do",ar:"قواعد",ex:"Jack wrote the survival rules on a piece of wood."},
+{w:"signal",p:"noun",m:"A sign or action to send a message",ar:"إشارة",ex:"They used smoke as a signal for help."},
+{w:"SOS",p:"noun",m:"An international distress signal meaning 'help'",ar:"إشارة استغاثة",ex:"They arranged rocks in an SOS shape on the sand."},
+{w:"rescue",p:"verb",m:"To save someone from danger",ar:"ينقذ",ex:"A ship came to rescue them from the island."},
+{w:"teamwork",p:"noun",m:"Working together as a group",ar:"عمل جماعي",ex:"Thanks to teamwork, they survived on the island."},
+{w:"danger",p:"noun",m:"A situation where harm is possible",ar:"خطر",ex:"Tracks and strange noises can mean danger."},
+{w:"survive",p:"verb",m:"To stay alive in a dangerous situation",ar:"ينجو",ex:"If you stay calm, you can survive in the wild."},
+{w:"wrap",p:"verb",m:"To cover something by folding material around it",ar:"يلف",ex:"Wrap the fruit in leaves to keep animals away."}
 ];
 const vocabExData=[
-{q:"Jack was the ______ of the small boat.",opts:["passenger","captain","crew"],ans:1},
-{q:"They built a ______ near the beach to protect them from rain.",opts:["signal","shelter","stream"],ans:1},
-{q:"A sudden ______ sank the boat that morning.",opts:["wave","storm","fire"],ans:1},
-{q:"Don't drink from the sea! Collect ______ instead.",opts:["smoke","rainwater","sand"],ans:1},
-{q:"Jack said: 'Don't go to the south hill &mdash; there are ______.'",opts:["insects","waves","snakes"],ans:2},
-{q:"The group used ______ from the fire to signal for help.",opts:["smoke","leaves","sand"],ans:0},
-{q:"Everyone needs to do their part &mdash; that's called ______.",opts:["teamwork","danger","rescue"],ans:0},
-{q:"They felt ______ of their hard work when the ship found them.",opts:["afraid","lost","proud"],ans:2}
+{q:"Jack was the ______ of the small boat.",opts:["passenger","captain","survivor"],ans:1},
+{q:"A sudden ______ rolled in and sank the boat.",opts:["stream","wave","storm"],ans:2},
+{q:"The ______ swam to a desert island.",opts:["survivors","passengers","rules"],ans:0},
+{q:"Don't drink ______ — it will make you sick!",opts:["stream","seawater","rainwater"],ans:1},
+{q:"Jack found a ______ with clean fresh water.",opts:["stream","wave","fire"],ans:0},
+{q:"They built ______ near the beach for safety.",opts:["signals","shelters","tracks"],ans:1},
+{q:"They arranged rocks in an ______ shape on the sand.",opts:["SOS","OK","ABC"],ans:0},
+{q:"Thanks to ______, they all survived on the island.",opts:["danger","teamwork","storms"],ans:1},
+{q:"______ the food in leaves to keep it clean.",opts:["Signal","Wrap","Sink"],ans:1},
+{q:"Stay ______ and follow the rules to survive.",opts:["calm","stormy","salty"],ans:0}
 ];
 const grammarEx=[
-{q:'______ on the wet floor!',opts:["Don't walk","Walk","Walking"],ans:0},
-{q:'______ the fire! It\'s dangerous.',opts:["Don't touch","Touch","Touching"],ans:0},
-{q:'______ seawater. It will make you sick.',opts:["Drink","Don't drink","Not drink"],ans:1},
-{q:'______ alone at night.',opts:["Walk","Not walk","Don't walk"],ans:2},
-{q:'______ food on the ground.',opts:["Don't leave","Leave","Not leave"],ans:0},
-{q:'______ in the forest. It\'s dark.',opts:["Build","Don't build","Not build"],ans:1},
-{q:'______ the rules! They keep us safe.',opts:["Don't forget","Forget","Not forget"],ans:0},
-{q:'______ your phone in class!',opts:["Don't use","Use","Not use"],ans:0},
-{q:'______ late for the meeting!',opts:["Be","Don't be","Not be"],ans:1},
-{q:'______ the door open.',opts:["Don't leave","Leave","Leaving"],ans:0}
+{q:"The floor is wet. ______ on the floor!",opts:["Don't walk","Don't to walk","Not walk"],ans:0},
+{q:"The fire is dangerous. ______ it!",opts:["Don't touches","Not touch","Don't touch"],ans:2},
+{q:"The food is not fresh. ______ it!",opts:["Don't eat","Don't eats","Not eating"],ans:0},
+{q:"The river is deep. ______ there!",opts:["Not swim","Don't swim","Don't swimming"],ans:1},
+{q:"It's late at night. ______ alone!",opts:["Don't walks","Don't walk","Not walk"],ans:1},
+{q:"The road is icy. ______ fast!",opts:["Don't drive","Don't drives","Not drive"],ans:0},
+{q:"The baby is sleeping. ______ noise!",opts:["Don't make","Don't makes","Not making"],ans:0},
+{q:"There are snakes. ______ near them!",opts:["Not go","Don't going","Don't go"],ans:2},
+{q:"This milk is old. ______ it!",opts:["Don't drinks","Don't drink","Not drink"],ans:1},
+{q:"The sea is rough. ______ today!",opts:["Don't swim","Don't swims","Not swimming"],ans:0}
 ];
 const recapEx=[
-{q:"I ______ visit my grandparents next weekend.",opts:["will","going to","am"],ans:0},
-{q:"She is ______ have a big birthday party.",opts:["will","going to","want"],ans:1},
-{q:"We ______ to the park yesterday.",opts:["go","goes","went"],ans:2},
-{q:"They ______ a great party last Friday.",opts:["have","had","has"],ans:1},
-{q:"Is there ______ milk in the fridge?",opts:["some","any","many"],ans:1},
-{q:"I want ______ pieces of cake, please.",opts:["a","some","any"],ans:1},
-{q:"She has never ______ sushi before.",opts:["try","tried","tries"],ans:1},
-{q:"Have you ever ______ to a desert island?",opts:["been","be","go"],ans:0},
-{q:"This book is ______ than that one.",opts:["more interesting","most interesting","interestinger"],ans:0},
-{q:"Instagram is ______ than Twitter for photos.",opts:["better","best","gooder"],ans:0},
-{q:"She is the ______ student in the class.",opts:["smart","smarter","smartest"],ans:2},
-{q:"This is the ______ movie I have ever seen!",opts:["exciting","more exciting","most exciting"],ans:2},
-{q:"If it ______, we will stay inside.",opts:["rains","will rain","rained"],ans:0},
-{q:"If you study hard, you ______ pass the exam.",opts:["would","will","do"],ans:1},
-{q:"You ______ drink seawater. It will make you sick.",opts:["should","shouldn't","don't have to"],ans:1},
-{q:"We ______ build a fire to stay warm. It's necessary.",opts:["should","have to","don't have to"],ans:1},
-{q:"______ a beautiful sunset!",opts:["What","How","What a"],ans:2},
-{q:"______ amazing! The island is gorgeous!",opts:["What","How","What a"],ans:1}
+{q:"I ______ build a fire before it gets dark.",opts:["will","going to","am"],ans:0},
+{q:"She is ______ find clean water in the morning.",opts:["will","going to","want"],ans:1},
+{q:"He enjoys ______ fish near the shore.",opts:["catch","catching","to catch"],ans:1},
+{q:"They decided ______ the leader's rules.",opts:["follow","following","to follow"],ans:2},
+{q:"Do you have ______ dry wood for the fire?",opts:["some","any","much"],ans:1},
+{q:"There are ______ coconuts on the ground.",opts:["some","any","much"],ans:0},
+{q:"______ shelter over there looks strong.",opts:["This","That","Those"],ans:1},
+{q:"______ tracks on the sand are very strange.",opts:["This","These","Those"],ans:2},
+{q:"I ______ swimming when the storm started.",opts:["was","were","am"],ans:0},
+{q:"While they ______ building a fire, it rained.",opts:["was","were","are"],ans:1},
+{q:"The water is ______ cold to swim in.",opts:["very","too","much"],ans:1},
+{q:"The sunset is ______ beautiful from the beach.",opts:["very","too","real"],ans:0},
+{q:"We ______ find food before dark.",opts:["need to","need","needs to"],ans:0},
+{q:"He ______ leave the island, but he has no boat.",opts:["wants to","want to","wants"],ans:0},
+{q:"You ______ eat those berries. They are dangerous.",opts:["should","shouldn't","don't have to"],ans:1},
+{q:"Everyone ______ follow the captain's rules.",opts:["have to","has to","should"],ans:1},
+{q:"What a ______ storm that was last night!",opts:["terrible","terribly","terror"],ans:0},
+{q:"What ______ beautiful island this is!",opts:["a","an","the"],ans:0}
 ];
 const listen1Data=[
-{q:"What should you do if you're lost?",opts:["Stay in one place","Keep moving around","Hide in the dark"],ans:0},
-{q:"What is the purpose of a fire?",opts:["To look pretty","To scare people","To stay warm"],ans:2},
-{q:"Fire can be made by collecting…",opts:["Sand & water","Animals & rocks","Dry wood & leaves"],ans:2}
+{q:"What should you do if you're lost?",opts:["Keep moving around","Stay in one place","Climb a tree"],ans:1},
+{q:"What is one purpose of a fire?",opts:["To cook only","To stay warm","To scare people"],ans:1},
+{q:"Fire can be made by collecting...",opts:["Wet rocks","Dry wood and leaves","Seawater"],ans:1}
 ];
 const listen1TF=[
 {q:"It's better to keep moving around if you are lost in the wild.",a:false},
@@ -769,80 +692,78 @@ const listen1TF=[
 {q:"If you stay calm and follow simple rules, you can survive.",a:true}
 ];
 const listen2Data=[
-{q:"What is the main idea of the passage?",opts:["Survival on a deserted island","Travelling by ship","Travelling by plane"],ans:0},
-{q:"In Cast Away, what happens?",opts:["His plane crashes, he ends up alone on an island","He finds a treasure","He becomes friends with pirates"],ans:0},
-{q:"What is the name of the volleyball in Cast Away?",opts:["Wilson","Bob","Tiger"],ans:0},
-{q:"Who are the survivors in The Blue Lagoon?",opts:["Two children","A man and his dog","A tiger and a boy"],ans:0},
-{q:"What happens in Life of Pi?",opts:["The story happens on a small boat with a tiger","Family building treehouse","Two children on island"],ans:0},
-{q:"What does the Swiss Family Robinson build?",opts:["A boat","A big treehouse","A cave home"],ans:1},
-{q:"Which movie has pirates?",opts:["Cast Away","Swiss Family Robinson","Life of Pi"],ans:1},
-{q:"What is the common lesson from all movies?",opts:["Always look for treasures","Teamwork, creativity, and survival skills are important","Don't eat unknown food"],ans:1}
+{q:"What is the main idea of these movies?",opts:["Cooking competitions","Survival on a deserted island","Space travel"],ans:1},
+{q:"In Cast Away, what happens to the main character?",opts:["His plane crashes, and he ends up alone on an island","He goes on vacation","He joins a pirate ship"],ans:0},
+{q:"What does the man name his volleyball?",opts:["Tom","Wilson","Jack"],ans:1},
+{q:"In Blue Lagoon, who survives on the island?",opts:["A family","Two children","A group of soldiers"],ans:1},
+{q:"What makes Life of Pi special?",opts:["It has magic","The story happens on a small boat with a tiger","It is about cooking"],ans:1},
+{q:"What does the family build in Swiss Family Robinson?",opts:["A boat","A big treehouse","A castle"],ans:1},
+{q:"Which movie has pirates?",opts:["Cast Away","Life of Pi","Swiss Family Robinson"],ans:2},
+{q:"What is a common lesson in all these movies?",opts:["Money is most important","Teamwork, creativity, and survival skills are important","Technology saves everyone"],ans:1}
 ];
 const listen2FillData=[
-{q:'In Cast Away, the main character talks to a ___ named Wilson.',ans:'volleyball'},
-{q:'The Blue Lagoon is about two ___ learning to survive.',ans:'children'},
-{q:'In Life of Pi, Pi is stuck on a ___ with a tiger.',ans:'boat'},
-{q:'Swiss Family Robinson survives by building a ___',ans:'treehouse'}
+{q:"In Cast Away, the main character talks to a ______ named Wilson.",opts:["football","volleyball","basketball"],ans:1},
+{q:"The Blue Lagoon is about two ______ learning to survive on an island.",opts:["adults","children","families"],ans:1},
+{q:"In Life of Pi, Pi is stuck on a ______ with a tiger.",opts:["island","boat","mountain"],ans:1},
+{q:"Swiss Family Robinson shows how a family survives by building a ______.",opts:["castle","treehouse","bridge"],ans:1}
 ];
 const listen2TF=[
 {q:"The man in Cast Away names the tiger Wilson.",a:false},
 {q:"Pi is afraid of the tiger at first, but learns to survive with it.",a:true},
 {q:"All the movies are about finding treasures on islands.",a:false},
-{q:"Pi collects rainwater and catches fish while sharing a boat with a tiger.",a:true},
+{q:"Pi collects rainwater and catches fish to survive while sharing a boat with a tiger.",a:true},
 {q:"The tiger attacked Pi.",a:false}
 ];
 const readingQ=[
-{q:"Why did Jack and the others end up on the desert island?",opts:["The boat broke down","A storm sank the boat","They were exploring"],ans:1,hl:"rq1"},
-{q:"Where did Jack say clean water could be found?",opts:["In the sea","In the west","In the east"],ans:2,hl:"rq2"},
-{q:"Why did Jack warn about the south hill?",opts:["It had snakes","Far from beach","No trees"],ans:0,hl:"rq3"},
-{q:"How did the group signal for help?",opts:["Waved hands","Used smoke and SOS with rocks","Shouted loudly"],ans:1,hl:"rq4"}
+{q:"Why did Jack and the others end up on the desert island?",opts:["The boat broke down","A storm sank the boat","They were exploring"],ans:1,hl:"q1"},
+{q:"Where did Jack say clean water could be found?",opts:["In the sea","In the west","In the east"],ans:2,hl:"q2"},
+{q:"Why did Jack warn the group about the south hill?",opts:["It had snakes","It was far away","It had no trees"],ans:0,hl:"q3"},
+{q:"How did the group signal for help?",opts:["They waved and screamed","They used smoke and an SOS sign with rocks","They shouted and used smoke"],ans:1,hl:"q4"}
 ];
 const readingTF=[
 {q:"The storm sank the boat on a rainy night.",a:false},
 {q:"Jack told the group to build shelters in the forest.",a:false},
 {q:"The group used smoke and rocks to signal for help.",a:true},
 {q:"Jack told the group to drink seawater if they were thirsty.",a:false},
-{q:"Jack's leadership helped the group survive.",a:true},
+{q:"Jack's leadership helped the group survive on the island.",a:true},
 {q:"A plane saw the group's SOS signal and rescued them.",a:false}
 ];
 const readingMistakes=[];
 const quizData=[
-{q:"The person who leads a ship = ?",opts:["captain","passenger","survivor","castaway"],ans:0,cat:"Vocab"},
-{q:"A place that protects you from rain and wind = ?",opts:["signal","shelter","smoke","stream"],ans:1,cat:"Vocab"},
-{q:"What you use to ask for help from far away = ?",opts:["shelter","leader","signal","crew"],ans:2,cat:"Vocab"},
-{q:"A group of people working on a ship = ?",opts:["passengers","survivors","leaders","crew"],ans:3,cat:"Vocab"},
-{q:"When you have no way out of a bad situation = ?",opts:["calm","rescued","trapped","safe"],ans:2,cat:"Vocab"},
-{q:"Big pieces of stone = ?",opts:["leaves","rocks","sand","waves"],ans:1,cat:"Vocab"},
-{q:"To stay alive in a dangerous situation = ?",opts:["attract","signal","survive","rescue"],ans:2,cat:"Vocab"},
-{q:"______ alone at night!",opts:["Walk","Don't walk","Walking","Not walk"],ans:1,cat:"Grammar"},
-{q:"______ the fire go out!",opts:["Let","Don't let","Letting","Not let"],ans:1,cat:"Grammar"},
-{q:"______ seawater!",opts:["Drink","Drinking","Don't drink","Not drink"],ans:2,cat:"Grammar"},
-{q:"______ in the forest!",opts:["Build","Building","Not build","Don't build"],ans:3,cat:"Grammar"},
-{q:"______ food on the ground!",opts:["Leave","Don't leave","Leaving","Not leave"],ans:1,cat:"Grammar"},
-{q:"______ the south hill!",opts:["Go to","Don't go to","Going to","Not go to"],ans:1,cat:"Grammar"},
-{q:"Alex says if you're lost, you should…",opts:["keep moving","stay in one place","hide"],ans:1,cat:"Listening"},
-{q:"Fire can be made from…",opts:["sand and water","dry wood and leaves","animals"],ans:1,cat:"Listening"},
-{q:"In Cast Away, the character names his volleyball…",opts:["Bob","Wilson","Tiger"],ans:1,cat:"Listening"},
-{q:"Jack said clean water was in the…",opts:["west","south","east"],ans:2,cat:"Reading"},
-{q:"The group was rescued by…",opts:["a plane","a ship","a helicopter"],ans:1,cat:"Reading"},
-{q:"'Out of the woods' means…",opts:["in a forest","out of danger","lost"],ans:1,cat:"Idioms"},
-{q:"'Pull your weight' means…",opts:["exercise more","do your fair share","gain weight"],ans:1,cat:"Idioms"}
+{q:"The leader of a ship = ?",opts:["passenger","captain","survivor"],ans:1,cat:"Vocab"},
+{q:"People who stay alive after danger = ?",opts:["crew","passengers","survivors"],ans:2,cat:"Vocab"},
+{q:"A small river of fresh water = ?",opts:["seawater","stream","wave"],ans:1,cat:"Vocab"},
+{q:"Working together as a group = ?",opts:["danger","teamwork","rescue"],ans:1,cat:"Vocab"},
+{q:"An international distress signal = ?",opts:["SOS","OK","HELP"],ans:0,cat:"Vocab"},
+{q:"To cover something by folding material = ?",opts:["wrap","track","signal"],ans:0,cat:"Vocab"},
+{q:"The food is old. ______ it!",opts:["Don't eat","Don't eats","Not eat"],ans:0,cat:"Grammar"},
+{q:"The river is deep. ______ there!",opts:["Don't swim","Not swim","Don't swimming"],ans:0,cat:"Grammar"},
+{q:"There are snakes. ______ near them!",opts:["Not go","Don't going","Don't go"],ans:2,cat:"Grammar"},
+{q:"It's dark. ______ alone in the forest!",opts:["Don't walk","Don't walks","Not walk"],ans:0,cat:"Grammar"},
+{q:"The sea is rough. ______ today!",opts:["Don't swims","Don't swim","Not swimming"],ans:1,cat:"Grammar"},
+{q:"What should you do if lost in the wild?",opts:["Keep moving","Stay in one place","Run fast"],ans:1,cat:"Listening"},
+{q:"What does the man in Cast Away name his volleyball?",opts:["Tom","Wilson","Jack"],ans:1,cat:"Listening"},
+{q:"What makes Life of Pi special?",opts:["Magic","A small boat with a tiger","Cooking"],ans:1,cat:"Listening"},
+{q:"What common lesson do the survival movies teach?",opts:["Money is key","Teamwork and creativity","Technology saves all"],ans:1,cat:"Listening"},
+{q:"Why did Jack and the others end up on the island?",opts:["Exploring","A storm sank the boat","Boat broke down"],ans:1,cat:"Reading"},
+{q:"How did the group signal for rescue?",opts:["Shouted","Smoke and SOS rocks","Phone call"],ans:1,cat:"Reading"},
+{q:"'learn the ropes' means ______.",opts:["climb with ropes","learn how to do something new","tie knots"],ans:1,cat:"Idioms"},
+{q:"'out of the woods' means ______.",opts:["in the forest","out of danger","lost in nature"],ans:1,cat:"Idioms"},
+{q:"'think outside the box' means ______.",opts:["open a box","be creative in solving problems","think about boxes"],ans:1,cat:"Idioms"}
 ];
-const memeWrong=[{e:'\u{1F605}',t:'Oops! Shipwrecked that answer!'},{e:'\u{1F926}',t:'Nice try! Navigate better!'},{e:'\u{1F62C}',t:'Almost! Check your compass!'},{e:'\u{1F648}',t:'That answer is stranded!'},{e:'\u{1F480}',t:'Your raft just sank!'},{e:'\u{1F62D}',t:'So close! Review and retry!'},{e:'\u{1FAE0}',t:'That answer needs rescue!'},{e:'\u{1F921}',t:'Castaway answer detected!'},{e:'\u{1F635}',t:'Confused? Check above!'},{e:'\u{1F9A5}',t:'Slow down and think again!'}];
-const memeRight=[{e:'\u{1F389}',t:'YESSS! Survival genius!'},{e:'\u{1F31F}',t:'Star explorer right here!'},{e:'\u{1F525}',t:"You're on FIRE!"},{e:'\u{1F4AA}',t:'Big brain energy!'},{e:'\u{1F3C6}',t:'Champion move!'},{e:'✨',t:'Absolutely brilliant!'},{e:'\u{1F680}',t:'To the rescue!'},{e:'\u{1F451}',t:'Crown this survivor!'}];
+const memeWrong=[{e:'\u{1F605}',t:'Oops! Shipwrecked that answer!'},{e:'\u{1F926}',t:'Nice try! Navigate better!'},{e:'\u{1F62C}',t:'Almost! Check your compass!'},{e:'\u{1F648}',t:'That answer got lost at sea!'},{e:'\u{1F480}',t:'Castaway answer detected!'},{e:'\u{1F62D}',t:'So close! Review and retry!'},{e:'\u{1FAE0}',t:'That answer needs rescuing!'},{e:'\u{1F921}',t:'Clown on the island!'},{e:'\u{1F635}',t:'Confused? Read above!'},{e:'\u{1F9A5}',t:'Slow down, survivor!'}];
+const memeRight=[{e:'\u{1F389}',t:'YESSS! Island champion!'},{e:'\u{1F31F}',t:'Star survivor right here!'},{e:'\u{1F525}',t:"You're on FIRE!"},{e:'\u{1F4AA}',t:'Big brain castaway!'},{e:'\u{1F3C6}',t:'Champion explorer!'},{e:'\u{2728}',t:'Absolutely brilliant!'},{e:'\u{1F680}',t:'To the rescue!'},{e:'\u{1F451}',t:'Crown this survivor!'}];
 let quizScore=0,quizAnswered=0;
 
 function buildVocabCards(data,cid){const c=document.getElementById(cid);if(!c)return;data.forEach(v=>{const d=document.createElement('div');d.className='vocab-card';d.onclick=e=>{if(e.target.classList.contains('tts-btn'))return;d.classList.toggle('flipped');updateSB()};const sw=v.w.replace(/'/g,"\\'");d.innerHTML='<div class="vocab-inner"><div class="vocab-front"><div class="word">'+v.w+' <button class="tts-btn" onclick="event.stopPropagation();speak(\''+sw+'\',this)">\u{1F50A}</button></div><div class="pos">'+v.p+'</div><div class="hint">Tap to flip</div></div><div class="vocab-back"><div class="meaning">'+v.m+'</div><div class="arabic">'+v.ar+'</div><div class="example">"'+v.ex+'"</div></div></div>';c.appendChild(d)})}
 function buildVocabEx(){const c=document.getElementById('vocab-ex-rows');vocabExData.forEach((ex,i)=>{const d=document.createElement('div');d.className='quiz-q';d.id='vq-'+i;d.setAttribute('data-answered','false');d.innerHTML='<div class="q-num">Q'+(i+1)+'</div><div class="q-text">'+ex.q+'</div>'+ex.opts.map((o,j)=>'<button class="quiz-option" onclick="checkVocabQ('+i+','+j+')">'+o+'</button>').join('');c.appendChild(d)})}
 function checkVocabQ(qi,oi){const d=document.getElementById('vq-'+qi);if(d.getAttribute('data-answered')==='true')return;d.setAttribute('data-answered','true');const b=d.querySelectorAll('.quiz-option');b.forEach(x=>x.disabled=true);oi===vocabExData[qi].ans?b[oi].classList.add('correct'):(b[oi].classList.add('wrong'),b[vocabExData[qi].ans].classList.add('correct'))}
-function checkVocabEx(){let s=0;vocabExData.forEach((e,i)=>{const d=document.getElementById('vq-'+i);if(d.querySelector('.correct')&&!d.querySelector('.wrong'))s++});const r=document.getElementById('vocab-result');r.innerHTML=(s===vocabExData.length?'Perfect! ':'Good effort! ')+s+'/'+vocabExData.length;r.style.color=s>=6?'var(--green)':'var(--red)'}
+function checkVocabEx(){let s=0;vocabExData.forEach((e,i)=>{const d=document.getElementById('vq-'+i);if(d.querySelector('.correct')&&!d.querySelector('.wrong'))s++});const r=document.getElementById('vocab-result');r.innerHTML=(s===vocabExData.length?'Perfect! ':'Good effort! ')+s+'/'+vocabExData.length;r.style.color=s>=8?'var(--green)':'var(--red)'}
 function retryVocabEx(){vocabExData.forEach((e,i)=>{const d=document.getElementById('vq-'+i);d.setAttribute('data-answered','false');d.querySelectorAll('.quiz-option').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=false})});document.getElementById('vocab-result').innerHTML=''}
 function buildMCQ(data,containerId,prefix){const c=document.getElementById(containerId);data.forEach((q,i)=>{const d=document.createElement('div');d.className='quiz-q';d.id=prefix+'-'+i;d.setAttribute('data-answered','false');d.innerHTML='<div class="q-num">Q'+(i+1)+'</div><div class="q-text">'+q.q+'</div>'+q.opts.map((o,j)=>'<button class="quiz-option" onclick="checkMCQ(\''+prefix+'\','+i+','+j+')">'+o+'</button>').join('')+'<div class="mcq-feedback" id="'+prefix+'fb-'+i+'"></div>';c.appendChild(d)})}
-function checkMCQ(prefix,qi,oi){const data=prefix==='l1q'?listen1Data:prefix==='l2q'?listen2Data:readingQ;const d=document.getElementById(prefix+'-'+qi);if(d.getAttribute('data-answered')==='true')return;d.setAttribute('data-answered','true');const b=d.querySelectorAll('.quiz-option');b.forEach(x=>x.disabled=true);const fb=document.getElementById(prefix+'fb-'+qi);if(oi===data[qi].ans){b[oi].classList.add('correct');fb.innerHTML='Correct!';fb.style.background='var(--green-light)';fb.style.color='var(--green)'}else{b[oi].classList.add('wrong');b[data[qi].ans].classList.add('correct');fb.innerHTML='Correct: <strong>'+data[qi].opts[data[qi].ans]+'</strong>';fb.style.background='var(--red-light)';fb.style.color='var(--red)';d.classList.add('shake');setTimeout(()=>d.classList.remove('shake'),500);if(prefix==='rq'&&data[qi].hl){const hl=document.querySelector('.highlight[data-q="'+data[qi].hl+'"]');if(hl)hl.classList.add('active');readingMistakes.push({q:data[qi].q,c:data[qi].opts[data[qi].ans]});updateMistakes()}}fb.classList.add('show')}
+function checkMCQ(prefix,qi,oi){const dataMap={'l1q':listen1Data,'l2q':listen2Data,'rq':readingQ,'l2fq':listen2FillData};const data=dataMap[prefix];const d=document.getElementById(prefix+'-'+qi);if(d.getAttribute('data-answered')==='true')return;d.setAttribute('data-answered','true');const b=d.querySelectorAll('.quiz-option');b.forEach(x=>x.disabled=true);const fb=document.getElementById(prefix+'fb-'+qi);if(oi===data[qi].ans){b[oi].classList.add('correct');fb.innerHTML='Correct!';fb.style.background='var(--green-light)';fb.style.color='var(--green)'}else{b[oi].classList.add('wrong');b[data[qi].ans].classList.add('correct');fb.innerHTML='Correct: <strong>'+data[qi].opts[data[qi].ans]+'</strong>';fb.style.background='var(--red-light)';fb.style.color='var(--red)';d.classList.add('shake');setTimeout(()=>d.classList.remove('shake'),500);if(prefix==='rq'&&data[qi].hl){const hl=document.querySelector('.highlight[data-q="'+data[qi].hl+'"]');if(hl)hl.classList.add('active');readingMistakes.push({q:data[qi].q,c:data[qi].opts[data[qi].ans]});updateMistakes()}}fb.classList.add('show')}
 function buildTF(data,containerId,prefix){const c=document.getElementById(containerId);data.forEach((item,i)=>{const d=document.createElement('div');d.className='fill-row';d.id=prefix+'-'+i;d.setAttribute('data-answered','false');d.innerHTML='<span style="font-size:0.85rem;flex:1">'+(i+1)+'. '+item.q+'</span><button class="btn" style="padding:4px 14px;font-size:0.82rem;background:var(--green);color:#fff;margin-left:auto" onclick="checkTFG(\''+prefix+'\','+i+',true)">True</button><button class="btn" style="padding:4px 14px;font-size:0.82rem;background:var(--red);color:#fff" onclick="checkTFG(\''+prefix+'\','+i+',false)">False</button><span class="result" id="'+prefix+'r-'+i+'"></span>';c.appendChild(d)})}
-function checkTFG(prefix,i,a){const dataMap={rtf:readingTF,l1tf:listen1TF,l2tf:listen2TF};const data=dataMap[prefix]||readingTF;const r=document.getElementById(prefix+'-'+i);if(r.getAttribute('data-answered')==='true')return;r.setAttribute('data-answered','true');const res=document.getElementById(prefix+'r-'+i);if(a===data[i].a){res.textContent='Correct';res.style.color='var(--green)';r.style.borderColor='var(--green)';r.style.background='var(--green-light)'}else{res.textContent='Wrong: '+(data[i].a?'True':'False');res.style.color='var(--red)';r.style.borderColor='var(--red)';r.style.background='var(--red-light)';r.classList.add('shake');setTimeout(()=>r.classList.remove('shake'),500)}}
-function buildFillIn(){const c=document.getElementById('listen2-fill');if(!c)return;const h=document.createElement('h4');h.style.cssText='font-family:Fredoka,sans-serif;margin-bottom:10px';h.textContent='Fill in the Blanks';c.appendChild(h);listen2FillData.forEach((item,i)=>{const d=document.createElement('div');d.className='fill-row';d.id='l2f-'+i;d.setAttribute('data-answered','false');const parts=item.q.split('___');d.innerHTML='<span style="font-size:0.85rem;flex:1">'+( i+1)+'. '+parts[0]+'<input type="text" class="fill-input" id="l2fi-'+i+'" placeholder="...">'+( parts[1]||'')+'</span><button class="btn" style="padding:4px 14px;font-size:0.82rem;background:var(--blue);color:#fff" onclick="checkFillIn('+i+')">Check</button><span class="result" id="l2fr-'+i+'"></span>';c.appendChild(d)})}
-function checkFillIn(i){const d=document.getElementById('l2f-'+i);if(d.getAttribute('data-answered')==='true')return;d.setAttribute('data-answered','true');const inp=document.getElementById('l2fi-'+i);const res=document.getElementById('l2fr-'+i);inp.disabled=true;if(inp.value.trim().toLowerCase()===listen2FillData[i].ans.toLowerCase()){res.textContent='Correct!';res.style.color='var(--green)';d.style.borderColor='var(--green)';d.style.background='var(--green-light)'}else{res.textContent='Answer: '+listen2FillData[i].ans;res.style.color='var(--red)';d.style.borderColor='var(--red)';d.style.background='var(--red-light)'}}
+function checkTFG(prefix,i,a){const dataMap={'rtf':readingTF,'l1tf':listen1TF,'l2tf':listen2TF};const data=dataMap[prefix];const r=document.getElementById(prefix+'-'+i);if(r.getAttribute('data-answered')==='true')return;r.setAttribute('data-answered','true');const res=document.getElementById(prefix+'r-'+i);if(a===data[i].a){res.textContent='Correct';res.style.color='var(--green)';r.style.borderColor='var(--green)';r.style.background='var(--green-light)'}else{res.textContent='Wrong: '+(data[i].a?'True':'False');res.style.color='var(--red)';r.style.borderColor='var(--red)';r.style.background='var(--red-light)';r.classList.add('shake');setTimeout(()=>r.classList.remove('shake'),500)}}
 function buildRecap(){const c=document.getElementById('recap-exercises');if(!c)return;recapEx.forEach((ex,i)=>{const row=document.createElement('div');row.className='fill-row';row.id='rex-'+i;row.innerHTML='<span style="font-size:0.85rem;flex:1">'+(i+1)+'. '+ex.q.replace('______','<select id="rsel-'+i+'"><option value="">—</option>'+ex.opts.map(o=>'<option value="'+o+'">'+o+'</option>').join('')+'</select>')+'</span><span class="result" id="rres-'+i+'"></span>';c.appendChild(row)})}
 function checkRecap(){let n=0;recapEx.forEach((ex,i)=>{const s=document.getElementById('rsel-'+i),r=document.getElementById('rres-'+i),row=document.getElementById('rex-'+i);if(s.value===ex.opts[ex.ans]){n++;r.textContent='Correct';r.style.color='var(--green)';row.style.borderColor='var(--green)';row.style.background='var(--green-light)'}else{r.textContent='Wrong';r.style.color='var(--red)';row.style.borderColor='var(--red)';row.style.background='var(--red-light)'}});document.getElementById('recap-score').textContent=n+'/'+recapEx.length}
 function retryRecap(){recapEx.forEach((e,i)=>{document.getElementById('rsel-'+i).value='';document.getElementById('rres-'+i).textContent='';const r=document.getElementById('rex-'+i);r.style.borderColor='var(--border)';r.style.background=''});document.getElementById('recap-score').textContent=''}
@@ -854,8 +775,9 @@ function toggleRole(id){document.getElementById(id+'-convo').classList.toggle('s
 function buildQuiz(){const c=document.getElementById('quiz-container');quizData.forEach((q,i)=>{const d=document.createElement('div');d.className='quiz-q';d.id='qq-'+i;d.setAttribute('data-answered','false');d.innerHTML='<div class="q-num">Q'+(i+1)+' — '+q.cat+'</div><div class="q-text">'+q.q+'</div>'+q.opts.map((o,j)=>'<button class="quiz-option" onclick="checkQuizQ('+i+','+j+')">'+o+'</button>').join('')+'<div class="quiz-meme" id="qm-'+i+'"></div>';c.appendChild(d)})}
 function checkQuizQ(qi,oi){const d=document.getElementById('qq-'+qi);if(d.getAttribute('data-answered')==='true')return;d.setAttribute('data-answered','true');quizAnswered++;const b=d.querySelectorAll('.quiz-option');b.forEach(x=>x.disabled=true);const mm=document.getElementById('qm-'+qi);if(oi===quizData[qi].ans){b[oi].classList.add('correct');quizScore++;const m=memeRight[Math.floor(Math.random()*memeRight.length)];mm.className='quiz-meme meme-correct show';mm.innerHTML='<span class="meme-emoji">'+m.e+'</span>'+m.t;createConfetti(d)}else{b[oi].classList.add('wrong');b[quizData[qi].ans].classList.add('correct');const m=memeWrong[Math.floor(Math.random()*memeWrong.length)];mm.className='quiz-meme meme-wrong show';mm.innerHTML='<span class="meme-emoji">'+m.e+'</span>'+m.t;d.classList.add('shake');setTimeout(()=>d.classList.remove('shake'),500)}document.getElementById('sb-quiz').textContent=quizScore+'/'+quizData.length}
 function createConfetti(p){const colors=['#e8a838','#f472b6','#60a5fa','#2d9d78','#e74c3c','#a78bfa'];for(let i=0;i<10;i++){const c=document.createElement('div');c.className='confetti-piece';c.style.background=colors[Math.floor(Math.random()*colors.length)];c.style.left=Math.random()*100+'%';c.style.top='-10px';c.style.animationDelay=Math.random()*0.3+'s';p.style.position='relative';p.appendChild(c);setTimeout(()=>c.remove(),2000)}}
-function showQuizScore(){const r=document.getElementById('quiz-final');r.classList.remove('hidden');const pct=Math.round(quizScore/quizData.length*100);let msg='',col='';if(pct>=90){msg="You're a SURVIVAL MASTER!";col='var(--green)'}else if(pct>=70){msg='Great job!';col='var(--accent)'}else if(pct>=50){msg='Good effort! Review!';col='var(--blue)'}else{msg="Don't worry! Try again!";col='var(--red)'}r.innerHTML='<div style="font-family:Fredoka,sans-serif;font-size:2.5rem;font-weight:700;color:'+col+'">'+quizScore+'/'+quizData.length+'</div><div style="font-size:1.1rem;margin-top:6px">'+pct+'% — '+msg+'</div>';r.style.borderColor=col}
+function showQuizScore(){const r=document.getElementById('quiz-final');r.classList.remove('hidden');const pct=Math.round(quizScore/quizData.length*100);let msg='',col='';if(pct>=90){msg="You're a SURVIVAL MASTER!";col='var(--green)'}else if(pct>=70){msg='Great job, explorer!';col='var(--accent)'}else if(pct>=50){msg='Good effort! Review!';col='var(--blue)'}else{msg="Don't worry! Try again!";col='var(--red)'}r.innerHTML='<div style="font-family:Fredoka,sans-serif;font-size:2.5rem;font-weight:700;color:'+col+'">'+quizScore+'/'+quizData.length+'</div><div style="font-size:1.1rem;margin-top:6px">'+pct+'% — '+msg+'</div>';r.style.borderColor=col}
 function retryQuiz(){quizScore=0;quizAnswered=0;document.getElementById('sb-quiz').textContent='0/'+quizData.length;document.getElementById('quiz-final').classList.add('hidden');quizData.forEach((q,i)=>{const d=document.getElementById('qq-'+i);d.setAttribute('data-answered','false');d.querySelectorAll('.quiz-option').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=false});const m=document.getElementById('qm-'+i);m.className='quiz-meme';m.innerHTML=''})}
+function startTimer(btn){btn.disabled=true;let t=60;const d=document.getElementById('timer-display');const iv=setInterval(()=>{t--;d.textContent=t+'s';d.style.color=t<=10?'var(--red)':'var(--accent)';if(t<=0){clearInterval(iv);d.textContent='Time is up!';d.style.color='var(--red)';btn.disabled=false}},1000)}
 function updateEmailWC(){const w=document.getElementById('email-area').value.trim().split(/\s+/).filter(w=>w).length;document.getElementById('email-wc').textContent=w;updateSB()}
 function updateWritingWC(){const w=document.getElementById('writing-area').value.trim().split(/\s+/).filter(w=>w).length;document.getElementById('writing-wc').textContent=w;updateSB()}
 function updateEmailCheck(){const ch=document.querySelectorAll('#email-checklist input');let n=0;ch.forEach(c=>{if(c.checked)n++});const r=document.getElementById('email-check-result');r.innerHTML=n===ch.length?'All checked! Great email!':n+'/'+ch.length+' checked';r.style.color=n===ch.length?'var(--green)':'var(--text-dim)'}
@@ -870,8 +792,8 @@ const slideState={grammar:{current:0,total:0},vocab:{current:0,total:0}};
 function initSlideshow(n){const t=document.getElementById(n+'Track');if(!t)return;const sl=t.querySelectorAll('.slide');slideState[n].total=sl.length;const dc=document.getElementById(n+'Dots');dc.innerHTML='';for(let i=0;i<sl.length;i++){const d=document.createElement('span');d.className='slide-dot'+(i===0?' active':'');d.onclick=()=>{slideState[n].current=i;updateSlide(n)};dc.appendChild(d)}updateSlide(n)}
 function slideNav(n,dir){const s=slideState[n];s.current=Math.max(0,Math.min(s.total-1,s.current+dir));updateSlide(n)}
 function updateSlide(n){const s=slideState[n];document.getElementById(n+'Track').style.transform='translateX(-'+s.current*100+'%)';document.getElementById(n+'Counter').textContent=(s.current+1)+' / '+s.total;document.getElementById(n+'Prev').disabled=s.current===0;document.getElementById(n+'Next').disabled=s.current===s.total-1;document.getElementById(n+'Dots').querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('active',i===s.current))}
-function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=13;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 10/[placeholder]_page-'+String(i).padStart(4,'0')+'.jpg" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=8;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 10/[placeholder]_page-'+String(i).padStart(4,'0')+'.jpg" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
-document.addEventListener('DOMContentLoaded',()=>{buildSlides();buildRecap();buildVocabCards(leadershipVocab,'vg-leadership');buildVocabCards(natureVocab,'vg-nature');buildVocabCards(survivalVocab,'vg-survival');buildVocabCards(feelingsVocab,'vg-feelings');buildVocabEx();buildMCQ(listen1Data,'listen1-questions','l1q');buildTF(listen1TF,'listen1-tf','l1tf');buildMCQ(listen2Data,'listen2-questions','l2q');buildFillIn();buildTF(listen2TF,'listen2-tf','l2tf');buildGrammar();buildTF(readingTF,'reading-tf','rtf');buildMCQ(readingQ,'reading-questions','rq');buildQuiz();initSlideshow('grammar');initSlideshow('vocab');loadNotes();loadTracker()});
+function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=14;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Island_Survival_Vocabulary_page[String(i).padStart(4,'0')]+'" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=11;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Island_Survival_Grammar_page[String(i).padStart(4,'0')]+'" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
+document.addEventListener('DOMContentLoaded',()=>{buildSlides();buildRecap();buildVocabCards(seaVocab,'vg-sea');buildVocabCards(islandVocab,'vg-island');buildVocabCards(safetyVocab,'vg-safety');buildVocabEx();buildMCQ(listen1Data,'listen1-mcq','l1q');buildTF(listen1TF,'listen1-tf','l1tf');buildMCQ(listen2Data,'listen2-mcq','l2q');buildMCQ(listen2FillData,'listen2-fill','l2fq');buildTF(listen2TF,'listen2-tf','l2tf');buildGrammar();buildTF(readingTF,'reading-tf','rtf');buildMCQ(readingQ,'reading-questions','rq');buildQuiz();initSlideshow('grammar');initSlideshow('vocab');loadNotes();loadTracker()});
 </script>
 </body>
 </html>

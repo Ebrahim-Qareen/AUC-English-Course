@@ -233,33 +233,28 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <div class="card">
       <h3>&#x1F399; NLM Overview Video</h3>
       <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Watch this fun overview of Session 9 topics: desert island vocabulary, What a + noun phrase grammar, and survival stories.</p>
-      <video controls style="width:100%;border-radius:12px;background:#000" preload="metadata">
-        <source src="../Session 9/Desert_Island_Survival_Guide.mp4" type="video/mp4">
-      </video>
+      <iframe src="https://drive.google.com/file/d/1uh2K4vQsLnP44nZkd6vNDo3NiKO4z3l9/preview" style="width:100%;height:400px;border:0;border-radius:12px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <div class="card">
       <h3>&#x1F3A7; Deep Dive: What a + Noun Phrase</h3>
       <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">A deep dive into exclamations with 'What a + noun phrase'.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="../Session 9/Survival_Grammar_and_Real_Life_Castaways.m4a" type="audio/mp4">
-      </audio>
+      <iframe src="https://drive.google.com/file/d/1rLu1n9-sfiPEMzeC17OzNXvaU7x0rTuy/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
     </div>
 
     <div class="card">
       <h3>&#x23F1; Quick Review</h3>
       <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">A quick 3&ndash;5 minute summary &mdash; perfect before class!</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="../Session 9/How_Selkirk_and_Tongan_castaways_survived.m4a" type="audio/mp4">
-      </audio>
+      <iframe src="https://drive.google.com/file/d/1NgI0nfi5RDk5-tmsEReTeYcxF8-Ke58D/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
     </div>
 
     <div class="card">
       <h3>&#x1F3A7; Listening 1: Robinson Crusoe &mdash; Anna &amp; Tom</h3>
       <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen to Anna and Tom talk about Robinson Crusoe, then answer the questions.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="https://scemoodle.aucegypt.edu/pluginfile.php/3170070/mod_hvp/content/171785/audios/files-6829fd3594417.mp3" type="audio/mpeg">
-      </audio>
+      <div style="background:linear-gradient(135deg,var(--blue-light),#e8f4fd);border:1px solid var(--blue);border-radius:12px;padding:14px;text-align:center">
+        <span style="font-size:1.3rem">&#x1F3A7;</span>
+        <span style="font-size:0.85rem;color:var(--blue);font-weight:600">This listening exercise audio is available on <a href="https://scemoodle.aucegypt.edu" target="_blank" style="color:var(--accent);text-decoration:underline">Moodle</a>. Log in to listen.</span>
+      </div>
       <div class="mt-12" id="listen1-questions"></div>
       <div class="mt-12" id="listen1-tf"></div>
     </div>
@@ -267,9 +262,10 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <div class="card">
       <h3>&#x1F3A7; Listening 2: Tongan Castaways</h3>
       <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:10px">Listen to the incredible story of the Tongan boys who survived on a deserted island, then answer the questions.</p>
-      <audio controls style="width:100%" preload="metadata">
-        <source src="https://scemoodle.aucegypt.edu/pluginfile.php/3170072/mod_hvp/content/171787/audios/files-682a0ba55eecc.mp3" type="audio/mpeg">
-      </audio>
+      <div style="background:linear-gradient(135deg,var(--blue-light),#e8f4fd);border:1px solid var(--blue);border-radius:12px;padding:14px;text-align:center">
+        <span style="font-size:1.3rem">&#x1F3A7;</span>
+        <span style="font-size:0.85rem;color:var(--blue);font-weight:600">This listening exercise audio is available on <a href="https://scemoodle.aucegypt.edu" target="_blank" style="color:var(--accent);text-decoration:underline">Moodle</a>. Log in to listen.</span>
+      </div>
       <div class="mt-12" id="listen2-questions"></div>
       <div class="mt-12" id="listen2-tf"></div>
     </div>
@@ -862,7 +858,9 @@ const slideState={grammar:{current:0,total:0},vocab:{current:0,total:0}};
 function initSlideshow(n){const t=document.getElementById(n+'Track');if(!t)return;const sl=t.querySelectorAll('.slide');slideState[n].total=sl.length;const dc=document.getElementById(n+'Dots');dc.innerHTML='';for(let i=0;i<sl.length;i++){const d=document.createElement('span');d.className='slide-dot'+(i===0?' active':'');d.onclick=()=>{slideState[n].current=i;updateSlide(n)};dc.appendChild(d)}updateSlide(n)}
 function slideNav(n,dir){const s=slideState[n];s.current=Math.max(0,Math.min(s.total-1,s.current+dir));updateSlide(n)}
 function updateSlide(n){const s=slideState[n];document.getElementById(n+'Track').style.transform='translateX(-'+s.current*100+'%)';document.getElementById(n+'Counter').textContent=(s.current+1)+' / '+s.total;document.getElementById(n+'Prev').disabled=s.current===0;document.getElementById(n+'Next').disabled=s.current===s.total-1;document.getElementById(n+'Dots').querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('active',i===s.current))}
-function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=13;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 9/Castaway_Survival_Journal_page-'+String(i).padStart(4,'0')+'.jpg" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=13;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 9/Castaway_Exclamation_Guide_page-'+String(i).padStart(4,'0')+'.jpg" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
+const driveMap_Castaway_Survival_Journal_page={"0001":"1cz1eLTQ5SQGuJ8LLYWGdU6hL6o0jXYkI","0002":"1qbSCHkTZZ0NDIXwt5Cyf6xklyZoKl_Vc","0003":"1AEtnQk6flONaZ05eynHmZIN8obCylyjU","0004":"1Q2jtEjcpjOaXxZrPWRBY8P_ivpKmszj1","0005":"1K3Gs9h3qrTbSBEVcTa9eB-k_HsbGSlkR","0006":"1IxJBm_3XjhMauHtz-K9Oly2qFxZn5aU8","0007":"1nhf7-rcDVfWY6ztjmB4ESY3segmhQjXT","0008":"1FGz7lpOMjZxJrZ75E6xolYa6xyrAbx0f","0009":"1rgMXZGtgx2k8-C5U29nVQr242sZPVYGu","0010":"1ryrWpuMi4FTF1hwa5CmqywiHgawaYXZj","0011":"1yiOKvh9w1v8vXR0Ga2uRjHwsKP_nC530","0012":"1l8KEFOahBgcqdJY6g7uKlFXBlTeHS7zg","0013":"1bU87cRqIKfUYEdVcmQ-ZrAIWGXrozsnR"};
+const driveMap_Castaway_Exclamation_Guide_page={"0001":"1oVOpnJdhc6Gq2BdRWBcNpniFnjjECEiz","0002":"1UtTh4uTKliEdkawVYqln8_5NXMxoOajR","0003":"1qZkK3ba6aRk5VYZFE0kLo3wC5mWuiSxR","0004":"1GSl6zHUq5G7dqndRObCmLmbBklgV0QH4","0005":"1vUs3JKElzpc8ClrROP9hspWhjigGOXgI","0006":"1rxNQymWN43KdCULggQWRt5kcJ4z-E19N","0007":"1FSufC3g0J-2TGJvNwvK_ULZvqeFf9fWa","0008":"1CN6CRGaX3S9EK4Ea-_-YN-7VQq45YWjK","0009":"1HqUDKaJ_CwS4f4rOCO-3g6jHAqYTDjwU","0010":"1w9DN1TbiZ7hX4ehHHkcho8B12njjYjvp","0011":"1QNwO-D22TP9G5KDc8rUyuyp9IAoihOhQ","0012":"1ofL-eq3gKgp5eYn3dq1gVZuP8cjOh-IF","0013":"1T3z-xuxtjzAZt0kR0EUiQrMbAxhLE6CC"};
+function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=13;i++){const k=String(i).padStart(4,'0');const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Castaway_Survival_Journal_page[k]+'" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=13;i++){const k=String(i).padStart(4,'0');const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Castaway_Exclamation_Guide_page[k]+'" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
 document.addEventListener('DOMContentLoaded',()=>{buildSlides();buildRecap();buildVocabCards(islandVocab,'vg-island');buildVocabCards(survivalVocab,'vg-survival');buildVocabCards(journeyVocab,'vg-journey');buildVocabCards(feelingsVocab,'vg-feelings');buildVocabEx();buildMCQ(listen1Data,'listen1-questions','l1q');buildTF(listen1TF,'listen1-tf','l1tf');buildMCQ(listen2Data,'listen2-questions','l2q');buildTF(listen2TF,'listen2-tf','l2tf');buildGrammar();buildTF(readingTF,'reading-tf','rtf');buildMCQ(readingQ,'reading-questions','rq');buildQuiz();initSlideshow('grammar');initSlideshow('vocab');loadNotes();loadTracker()});
 </script>
 </body>
