@@ -184,6 +184,9 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="7">Session 7 - Feelings (Negative)</option>
       <option value="8">Session 8 - Money & Budgeting</option>
       <option value="9">Session 9 - Deserted Island</option>
+      <option value="10">Session 10 - Island Survival</option>
+      <option value="11">Session 11 - Clothes & Fashion</option>
+      <option value="12">Session 12 - Describing Clothes</option>
     </select>
   </div>
 
@@ -277,6 +280,9 @@ h1,h2,h3,.fredoka{font-family:'Fredoka',sans-serif}
       <option value="7">Session 7</option>
       <option value="8">Session 8</option>
       <option value="9">Session 9</option>
+      <option value="10">Session 10</option>
+      <option value="11">Session 11</option>
+      <option value="12">Session 12</option>
     </select>
     <button class="btn btn-secondary btn-small" onclick="clearLeaderboard()" style="margin-left:auto;font-size:.82rem;padding:8px 14px">Clear All</button>
   </div>
@@ -372,38 +378,64 @@ const questionBank = {
     {q: 'Negative thoughts are like...', options: ['ants at a picnic','stars in the sky','fish in the sea','birds in a tree'], answer: 0, explanation: 'ANTs = Automatic Negative Thoughts (they ruin good things like ants at a picnic!).'},
   ],
   8: [
-    {q: 'A plan for how to spend and save money is called a...', options: ['budget','loan','cost','salary'], answer: 0, explanation: 'A budget is a plan for managing your money.'},
-    {q: '"You _____ save money every month."', options: ['should','have to','shouldn\'t','has to'], answer: 0, explanation: '"Should" gives advice — it\'s a good idea to save.'},
-    {q: 'What does "invest" mean?', options: ['Put money into something to make it grow','Spend money quickly','Borrow money','Lose money'], answer: 0, explanation: 'Invest = use money to make more money over time.'},
-    {q: '"She _____ spend so much on clothes."', options: ['shouldn\'t','should','has to','must'], answer: 0, explanation: '"Shouldn\'t" = it\'s not a good idea.'},
-    {q: 'Money you receive for working is called...', options: ['salary','budget','debt','expense'], answer: 0, explanation: 'Salary = the money your employer pays you.'},
-    {q: '"You _____ pay your rent on time."', options: ['have to','should','might','could'], answer: 0, explanation: '"Have to" = it\'s necessary/required, not optional.'},
-    {q: 'What does "debt" mean?', options: ['Money you owe someone','Money you save','Money you find','Money you invest'], answer: 0, explanation: 'Debt = money that you must pay back.'},
-    {q: '"They _____ track their expenses."', options: ['should','shouldn\'t','mustn\'t','can\'t'], answer: 0, explanation: '"Should" = good advice for money management.'},
-    {q: 'What is an "expense"?', options: ['Money you spend','Money you earn','Money you save','Money you find'], answer: 0, explanation: 'An expense is something you spend money on.'},
-    {q: '"He _____ work overtime to pay his bills."', options: ['has to','should','might','would'], answer: 0, explanation: '"Has to" = necessity, he has no choice.'},
+    {q: 'Money you keep for future use = ?', options: ['savings','income','fees','budget'], answer: 0, explanation: 'Savings = money you keep and don\'t spend.'},
+    {q: 'A plan for how to spend and save = ?', options: ['budget','loan','cost','salary'], answer: 0, explanation: 'A budget is a plan for managing your money.'},
+    {q: 'Money you owe to someone = ?', options: ['debt','bills','savings','fees'], answer: 0, explanation: 'Debt = money you owe and must pay back.'},
+    {q: 'Money borrowed that you pay back = ?', options: ['loan','expenses','income','salary'], answer: 0, explanation: 'A loan is borrowed money repaid over time.'},
+    {q: 'Payments for water and electricity = ?', options: ['bills','fees','cost','debt'], answer: 0, explanation: 'Bills are regular payments for services.'},
+    {q: 'To put money into something to make it grow = ?', options: ['invest','track','save','budget'], answer: 0, explanation: 'Invest = put money in to earn more money.'},
+    {q: '"You ______ save money every month."', options: ['should','have to','shouldn\'t','has to'], answer: 0, explanation: '"Should" gives advice (it\'s a good idea).'},
+    {q: '"We ______ pay taxes. It\'s the law."', options: ['have to','should','don\'t have to','shouldn\'t'], answer: 0, explanation: '"Have to" = obligation, it\'s required.'},
+    {q: '"You ______ spend all your salary."', options: ['shouldn\'t','should','have to','has to'], answer: 0, explanation: '"Shouldn\'t" = it\'s not a good idea.'},
+    {q: '"She ______ pay for parking. It\'s free."', options: ['doesn\'t have to','shouldn\'t','has to','should'], answer: 0, explanation: '"Doesn\'t have to" = not necessary.'},
   ],
   9: [
-    {q: 'A piece of land surrounded by water is called...', options: ['an island','a shore','a beach','a cave'], answer: 0, explanation: 'An island is land completely surrounded by water.'},
-    {q: 'A person left alone after a shipwreck is a...', options: ['castaway','crew','diary','adventure'], answer: 0, explanation: 'A castaway is someone stranded after a shipwreck.'},
-    {q: 'To save someone from danger = ?', options: ['rescue','explore','hunt','signal'], answer: 0, explanation: 'Rescue means to save someone from a dangerous situation.'},
-    {q: 'A flat boat made from pieces of wood = ?', options: ['raft','shelter','ship','cave'], answer: 0, explanation: 'A raft is a simple flat boat made from wood or other materials.'},
-    {q: 'Things you need like food and tools = ?', options: ['supplies','dangers','shores','crews'], answer: 0, explanation: 'Supplies = essential things like food, water, and tools.'},
-    {q: '"______ beautiful island!" — choose the correct exclamation.', options: ['What a','What','How a','How'], answer: 0, explanation: '"What a + adjective + singular noun" for exclamations.'},
-    {q: '"______ amazing views from the hill!"', options: ['What','What a','How a','How'], answer: 0, explanation: '"What + adjective + plural noun" (no "a" for plural).'},
-    {q: '"______ scary experience!"', options: ['What a','What','How','How a'], answer: 0, explanation: '"What a + adjective + singular noun" for exclamations.'},
-    {q: '"______ brave man Selkirk was!"', options: ['What a','How','What','How a'], answer: 0, explanation: '"What a + adjective + noun" for exclamations about people.'},
-    {q: '"In the same boat" means...', options: ['In the same difficult situation','On a real boat','Going sailing','Having fun'], answer: 0, explanation: 'In the same boat = sharing the same difficult situation.'},
-    {q: '"Sink or swim" means...', options: ['Succeed or fail by yourself','Go to the beach','Learn to swim','Take a bath'], answer: 0, explanation: 'Sink or swim = you must handle it alone, succeed or fail.'},
-    {q: '"Weather the storm" means...', options: ['Survive a difficult time','Check the weather','Go outside in rain','Cancel your plans'], answer: 0, explanation: 'Weather the storm = get through a tough situation.'},
-    {q: 'How did Robinson Crusoe survive on the island?', options: ['Grew food and kept a diary','Built a boat','Stayed in a hotel','Called for help'], answer: 0, explanation: 'Crusoe survived by farming, building shelter, and writing in his diary.'},
-    {q: 'How long were the Tongan boys stranded?', options: ['15 months','6 months','2 years','3 years'], answer: 0, explanation: 'The six Tongan boys were stranded for about 15 months.'},
-    {q: 'Why did Alexander Selkirk stay on the island?', options: ['He believed his ship would sink','He wanted to explore','By accident','He was forced'], answer: 0, explanation: 'Selkirk chose to stay because he thought the ship was unsafe — and he was right.'},
-    {q: 'Not afraid of danger = ?', options: ['brave','lonely','desert','calm'], answer: 0, explanation: 'Brave = willing to face danger without fear.'},
-    {q: 'To travel around a new place = ?', options: ['explore','hunt','survive','escape'], answer: 0, explanation: 'Explore = travel through an unfamiliar area to learn about it.'},
-    {q: '"Go with the flow" means...', options: ['Accept things as they happen','Swim in the river','Follow the crowd','Move faster'], answer: 0, explanation: 'Go with the flow = relax and accept the situation.'},
-    {q: '"Test the waters" means...', options: ['Try something carefully first','Jump in the ocean','Check water temperature','Take a swimming test'], answer: 0, explanation: 'Test the waters = try something cautiously before committing.'},
-    {q: '"What ______ terrible weather!" — choose the correct word.', options: ['(nothing needed)','a','an','the'], answer: 0, explanation: '"What terrible weather!" — no article with uncountable nouns.'},
+    {q: 'A person left alone on an island = ?', options: ['castaway','crew','sailor','explorer'], answer: 0, explanation: 'A castaway is stranded alone, usually after a shipwreck.'},
+    {q: 'A place that protects you from weather = ?', options: ['shelter','raft','signal','shore'], answer: 0, explanation: 'Shelter protects you from rain, wind, and sun.'},
+    {q: 'When a ship is destroyed at sea = ?', options: ['shipwreck','adventure','rescue','escape'], answer: 0, explanation: 'A shipwreck is the destruction of a ship.'},
+    {q: 'To save someone from danger = ?', options: ['rescue','strand','hunt','signal'], answer: 0, explanation: 'Rescue = save from a dangerous situation.'},
+    {q: 'A flat structure that floats on water = ?', options: ['raft','shelter','shore','cave'], answer: 0, explanation: 'A raft is a simple floating platform.'},
+    {q: '"______ a beautiful island!"', options: ['What','How','Which','Where'], answer: 0, explanation: '"What + a/an + adjective + noun!" for exclamations.'},
+    {q: '"How ______ the sunset is!"', options: ['beautiful','a beautiful','beauty','beautifully'], answer: 0, explanation: '"How + adjective" for exclamations.'},
+    {q: '"What ______ terrible weather!"', options: ['(nothing — uncountable)','a','the','an'], answer: 0, explanation: 'No article with uncountable nouns in exclamations.'},
+    {q: '\'In the same boat\' means ______', options: ['in the same situation','on a real boat','traveling together','going fishing'], answer: 0, explanation: 'Idiom: sharing the same difficult situation.'},
+    {q: '\'Sink or swim\' means ______', options: ['succeed or fail alone','learn to swim','go to the beach','take a boat'], answer: 0, explanation: 'Idiom: you must manage by yourself.'},
+  ],
+  10: [
+    {q: 'The leader of a ship = ?', options: ['captain','passenger','survivor','crew'], answer: 0, explanation: 'The captain commands the ship.'},
+    {q: 'People who stay alive after danger = ?', options: ['survivors','crew','passengers','captains'], answer: 0, explanation: 'Survivors live through dangerous events.'},
+    {q: 'A small river of fresh water = ?', options: ['stream','seawater','wave','storm'], answer: 0, explanation: 'A stream is a small natural flow of water.'},
+    {q: 'Working together as a group = ?', options: ['teamwork','danger','rescue','signal'], answer: 0, explanation: 'Teamwork = cooperating to achieve a goal.'},
+    {q: '"The floor is wet. ______ on the floor!"', options: ['Don\'t walk','Don\'t to walk','Not walk','Don\'t walks'], answer: 0, explanation: 'Negative imperative: Don\'t + base verb.'},
+    {q: '"The fire is dangerous. ______ it!"', options: ['Don\'t touch','Don\'t touches','Not touch','Don\'t touching'], answer: 0, explanation: 'Negative imperative: Don\'t + base verb.'},
+    {q: '"The river is deep. ______ there!"', options: ['Don\'t swim','Not swim','Don\'t swimming','Not swimming'], answer: 0, explanation: 'Negative imperative: Don\'t + base verb.'},
+    {q: '\'Learn the ropes\' means ______', options: ['learn something new','climb ropes','tie knots','be strong'], answer: 0, explanation: 'Idiom: learn the basics of a new task.'},
+    {q: '\'Out of the woods\' means ______', options: ['out of danger','in the forest','lost in nature','camping'], answer: 0, explanation: 'Idiom: no longer in a difficult situation.'},
+    {q: '\'Think outside the box\' means ______', options: ['be creative','open a box','think about boxes','escape'], answer: 0, explanation: 'Idiom: think in an original, creative way.'},
+  ],
+  11: [
+    {q: 'A formal set of jacket and trousers = ?', options: ['suit','jeans','sweater','shorts'], answer: 0, explanation: 'A suit is formal business clothing.'},
+    {q: 'Shoes with tall heels = ?', options: ['high heels','sneakers','boots','sandals'], answer: 0, explanation: 'High heels are elegant shoes with raised heels.'},
+    {q: 'Clothes worn for sleeping = ?', options: ['pajamas','shorts','dress','suit'], answer: 0, explanation: 'Pajamas are comfortable clothes for sleeping.'},
+    {q: 'Extra items like bags and belts = ?', options: ['accessories','outfits','occasions','materials'], answer: 0, explanation: 'Accessories complement your outfit (bags, belts, jewelry).'},
+    {q: '"The plural of \'dress\' is ______"', options: ['dresses','dresss','dressen','dress'], answer: 0, explanation: 'Words ending in -ss, -sh, -ch, -x add -es.'},
+    {q: '"The plural of \'scarf\' is ______"', options: ['scarves','scarfs','scarfes','scarfies'], answer: 0, explanation: 'Many -f/-fe words change to -ves.'},
+    {q: 'Which word is always plural?', options: ['scissors','hat','coat','boot'], answer: 0, explanation: 'Scissors, trousers, glasses are always plural.'},
+    {q: '\'Dressed to the nines\' means ______', options: ['wearing very fancy clothes','old clothes','nine items','cheap clothes'], answer: 0, explanation: 'Idiom: dressed very elegantly.'},
+    {q: '\'Fit like a glove\' means ______', options: ['fits perfectly','too tight','made of leather','uncomfortable'], answer: 0, explanation: 'Idiom: fits exactly right.'},
+    {q: '\'Roll up your sleeves\' means ______', options: ['work hard','fold shirt','feel cold','relax'], answer: 0, explanation: 'Idiom: prepare to do difficult work.'},
+  ],
+  12: [
+    {q: 'A pattern of lines = ?', options: ['striped','floral','checked','plain'], answer: 0, explanation: 'Striped = having parallel lines of color.'},
+    {q: 'Material made from animal skin = ?', options: ['leather','cotton','silk','wool'], answer: 0, explanation: 'Leather is made from animal hide.'},
+    {q: 'A smooth luxury fabric = ?', options: ['silk','denim','wool','linen'], answer: 0, explanation: 'Silk is a smooth, soft luxury fabric.'},
+    {q: 'Having no pattern = ?', options: ['plain','floral','striped','checked'], answer: 0, explanation: 'Plain = one solid color, no pattern.'},
+    {q: 'Which adjective order is correct?', options: ['a big red bag','a red big bag','a bag big red','red a big bag'], answer: 0, explanation: 'OSASCOMP: Size before Color.'},
+    {q: 'Which is correct?', options: ['blue cotton shirt','cotton blue shirt','shirt blue cotton','a cotton blue'], answer: 0, explanation: 'OSASCOMP: Color before Material.'},
+    {q: 'In OSASCOMP, what comes first?', options: ['Opinion','Size','Color','Material'], answer: 0, explanation: 'O = Opinion is always first in adjective order.'},
+    {q: '\'Shop till you drop\' means ______', options: ['shop until very tired','fall while shopping','drop items','window shopping'], answer: 0, explanation: 'Idiom: shop for a very long time.'},
+    {q: '\'Dress down\' means ______', options: ['wear casual clothes','feel sad','take off clothes','be rude'], answer: 0, explanation: 'Idiom: wear informal, casual clothes.'},
+    {q: '\'Knock someone\'s socks off\' means ______', options: ['impress very much','hurt someone','remove socks','surprise'], answer: 0, explanation: 'Idiom: amaze or greatly impress someone.'},
   ]
 };
 
@@ -534,7 +566,7 @@ function renderLeaderboard() {
   if (!lb.length) { body.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
   const medals = ['&#129351;','&#129352;','&#129353;'];
-  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7','8':'S8','9':'S9'};
+  const sessionNames = {all:'All','1':'S1','2':'S2','3':'S3','4':'S4','5':'S5','6':'S6','7':'S7','8':'S8','9':'S9','10':'S10','11':'S11','12':'S12'};
   body.innerHTML = lb.map((e,i) => `<tr><td>${medals[i]||i+1}</td><td>${esc(e.name)}</td><td style="color:var(--accent);font-weight:700">${e.score}</td><td>${sessionNames[e.session]||'All'}</td><td style="color:var(--text-dim)">${e.date}</td></tr>`).join('');
 }
 
@@ -772,21 +804,51 @@ function endGame() {
 // ===================== CONFETTI =====================
 function launchConfetti() {
   const container = document.getElementById('confettiContainer');
-  const colors = ['#e74c3c','#3498db','#2ecc71','#f39c12','#9b59b6','#e91e63','#00bcd4','#ff5722'];
-  for (let i = 0; i < 80; i++) {
+  container.innerHTML = '';
+  const colors = ['#a78bfa','#f472b6','#34d399','#60a5fa','#f59e0b','#e21b3c','#1368ce'];
+  for (let i = 0; i < 60; i++) {
     const piece = document.createElement('div');
-    piece.style.cssText = `position:fixed;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};left:${Math.random()*100}%;top:-10px;border-radius:${Math.random()>0.5?'50%':'2px'};pointer-events:none;z-index:9999;animation:confettiFall ${1.5+Math.random()*2}s ease-out forwards;animation-delay:${Math.random()*0.5}s;opacity:0;`;
+    piece.className = 'confetti-piece';
+    piece.style.left = Math.random() * 100 + '%';
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.width = (Math.random() * 8 + 6) + 'px';
+    piece.style.height = (Math.random() * 8 + 6) + 'px';
+    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    piece.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+    piece.style.animationDelay = (Math.random() * 1.5) + 's';
     container.appendChild(piece);
   }
-  setTimeout(() => container.innerHTML = '', 4000);
+  setTimeout(() => container.innerHTML = '', 5000);
 }
 
-if (!document.getElementById('confettiStyle')) {
-  const style = document.createElement('style');
-  style.id = 'confettiStyle';
-  style.textContent = `@keyframes confettiFall{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}`;
-  document.head.appendChild(style);
+// ===================== SHARE / REPLAY =====================
+function shareScore() {
+  const gs = gameState;
+  const sessionName = gs.session === 'all' ? 'All Sessions' : `Session ${gs.session}`;
+  const text = `I scored ${gs.score} points on AUC A2A Quiz Challenge! (${gs.correct}/${gs.questions.length} correct, ${sessionName}, ${currentDifficulty} mode) Can you beat my score?`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('#resultsScreen .btn-primary');
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.style.background = 'var(--green)';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 2000);
+  }).catch(() => {
+    alert(text);
+  });
 }
+
+function playAgain() {
+  showScreen('welcomeScreen');
+  refreshPreview();
+}
+
+// ===================== INIT =====================
+refreshPreview();
+
+// Enter key starts game from name field
+document.getElementById('playerName').addEventListener('keydown', e => {
+  if (e.key === 'Enter') startGame();
+});
 </script>
 </body>
 </html>
