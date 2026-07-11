@@ -10,7 +10,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 h1,h2,h3{font-family:'Fredoka',sans-serif}
-.hero{background:linear-gradient(135deg,#f0c929 0%,#e8a838 40%,#e8862a 100%);padding:50px 24px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#ff6b6b 0%,#ee5a24 40%,#f0932b 100%);padding:50px 24px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.08)}
 .hero-emoji{font-size:3rem;margin-bottom:8px}
 .hero h1{font-size:2.2rem;font-weight:700;margin-bottom:4px}
@@ -257,19 +257,19 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <div class="card" style="background:linear-gradient(135deg,#fef9e7,#fff3e6);border:1px solid rgba(232,168,56,0.2)">
       <h3>&#x1F3AC; Birthday Party Planning &mdash; Video Lesson</h3>
       <p style="font-size:0.88rem;color:var(--text-dim);margin-bottom:8px">Watch this fun video about planning the perfect birthday party in English!</p>
-      <iframe src="https://drive.google.com/file/d/19WhrECsLxX_3ses65iDJY1bJ3p4Y6_oc/preview" style="width:100%;height:400px;border:0;border-radius:12px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <video controls preload="metadata" style="width:100%;display:block;border-radius:12px"><source src="../Session 2/Birthday_Party_Planning.mp4" type="video/mp4"></video>
     </div>
 
     <div class="audio-card">
       <div class="audio-icon">&#x1F3A7;</div>
       <div class="audio-info" style="flex:1"><h4>Deep Dive: Party Planning English</h4><p>Full audio lesson &mdash; vocabulary, grammar &amp; Egyptian party culture</p></div>
-      <iframe src="https://drive.google.com/file/d/1wTjAWTJzeo4NcHukHcodbRJcRIb_stkR/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
+      <audio controls preload="none" style="width:100%;max-width:500px;margin-top:4px"><source src="../Session 2/Essential_English_for_Planning_Birthday_Parties.m4a" type="audio/mp4"></audio>
     </div>
 
     <div class="audio-card" style="background:linear-gradient(135deg,#e8eaff,#f0f0ff);border-color:#d0d3f0">
       <div class="audio-icon">&#x1F4DE;</div>
       <div class="audio-info" style="flex:1"><h4>Quick Review: Plan the Perfect Party</h4><p>5-minute overview &mdash; key words, grammar rule &amp; top mistake</p></div>
-      <iframe src="https://drive.google.com/file/d/1frQYTkOjLAeWABAIUI45nLmyF9Zu3kvB/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
+      <audio controls preload="none" style="width:100%;max-width:500px;margin-top:4px"><source src="../Session 2/Plan_the_perfect_party_in_English.m4a" type="audio/mp4"></audio>
     </div>
 
     <div class="audio-card">
@@ -512,10 +512,6 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
 </div>
 
 <script>
-const driveMap_AUC_Party_Planning_English_page={"0001": "1uftmAYN5qj-xUgvXHdy4A3uSF_fJoyrC", "0002": "1N0vQg0U5J_9DOtyAJIt_7iMmLcVkrIXQ", "0003": "1MF6S5xoUTTFBfIVL7FHZg4wCUqE_kPLf", "0004": "15KIjhqXJZ3dLh6WaCYXko7ofYc5kFpsY", "0005": "1k2MgcFU6gP5BuUEHP1CTM_Y8VDXx8D_z", "0006": "1Sbo0fnMoFOtg0tLERFS6yd0KVnJlag2g", "0007": "1cxV1I-VrX1JOFf5ZTmu_JUEDq5m2qfmG", "0008": "1IwRmIs5281i8L1vdEfhPRHRUHTq6jlEr", "0009": "1SdjRw6jGVkp8AoOJGRLttp-Iz7YSuCLl", "0010": "1ZQBUYM4VLCoaDjT9rEQ228UZKAsREi7p", "0011": "1N5_QnE7F4ygLLrCJTOLzr3G0qXCUof_Z", "0012": "1cRWrGF5cQ3lX-Hj5MUdz3xOOGy8KBp26", "0013": "1ggI0WMPEe6ryENaEmCuptNuyGNJdDc-B", "0014": "12lvotwFKKuQ00Mc1nu3q0Rn1r4z_0yaA", "0015": "18R6iYWtZhDOoYkWmwNr7YeSfEHfLal6n"};
-
-const driveMap_VIP_Grammar_Party_page={"0001": "11j0SNF7YrV1RHvjsGSX5Z2LjrvM6kCfA", "0002": "1-wZAI7KkH75QxXSYgc6Mu7_PUETTCGMD", "0003": "1PY-IdJfC4B0Z8nKEUH-MXKxUZSGYG7yU", "0004": "1dONpr-SyBV8jtATk0OC_HJc3VicXI4KN", "0005": "1Q1ontLDP8ywWRLRXzUz5tKW1UdzaeU39", "0006": "1x98_Smi5GkjuvRnQq0piP136Iudi5yJo", "0007": "1GWC-uv3uLDkYMYcceBVUlE0_DnwqW_PT", "0008": "166Kbf7ReLiapC2BG74z-MwYVX6y3tskc", "0009": "1it7gdfPXgEtKZxmEDi21DhdLxaYZHkvT", "0010": "1sA3twAuUU4v5DHhvyXv4KVId8txwxSnZ", "0011": "1z8k3DHMaE2-x4RV8kDg1CCP0hBs4wkWL", "0012": "1tC8wWc8k9dE73vY0eP0LquDthhdXz7eC"};
-
 function speak(w,b){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w);u.lang='en-US';u.rate=0.85;const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith('en'));if(v)u.voice=v;if(b){b.classList.add('playing');u.onend=()=>b.classList.remove('playing')}speechSynthesis.speak(u)}
 if('speechSynthesis' in window)speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
 
@@ -597,7 +593,7 @@ function initSlideshow(n){const t=document.getElementById(n+'Track');if(!t)retur
 function slideNav(n,dir){const s=slideState[n];s.current=Math.max(0,Math.min(s.total-1,s.current+dir));updateSlide(n)}
 function updateSlide(n){const s=slideState[n];document.getElementById(n+'Track').style.transform='translateX(-'+s.current*100+'%)';document.getElementById(n+'Counter').textContent=(s.current+1)+' / '+s.total;document.getElementById(n+'Prev').disabled=s.current===0;document.getElementById(n+'Next').disabled=s.current===s.total-1;document.getElementById(n+'Dots').querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('active',i===s.current))}
 
-function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=15;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_AUC_Party_Planning_English_page[String(i).padStart(4,'0')]+'" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=12;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_VIP_Grammar_Party_page[String(i).padStart(4,'0')]+'" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
+function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=15;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 2/AUC_Party_Planning_English_page-'+String(i).padStart(4,'0')+'.jpg" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=12;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 2/VIP_Grammar_Party_page-'+String(i).padStart(4,'0')+'.jpg" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
 
 document.addEventListener('DOMContentLoaded',()=>{buildSlides();buildRecap();buildVocabCards(partyVocab,'vg-party');buildVocabCards(helpVocab,'vg-help');buildVocabCards(actionVocab,'vg-action');buildIdioms();buildVocabEx();buildListen1();buildTF();buildGrammar();buildReading();buildQuiz();initSlideshow('grammar');initSlideshow('vocab');loadNotes();loadTracker()});
 </script>
