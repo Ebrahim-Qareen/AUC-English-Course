@@ -247,19 +247,19 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <div class="card" style="background:linear-gradient(135deg,#fef9e7,#fff3e6);border:1px solid rgba(232,168,56,0.2)">
       <h3>&#x1F3AC; Social Media &amp; Friends &mdash; Video Lesson</h3>
       <p style="font-size:0.88rem;color:var(--text-dim);margin-bottom:8px">Watch this fun video about friends and social media!</p>
-      <iframe src="https://drive.google.com/file/d/1qwPdzcHxAQ-ey5Tx_FaIk0zYceq6Wet6/preview" style="width:100%;height:400px;border:0;border-radius:12px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <video controls preload="metadata" style="width:100%;display:block;border-radius:12px"><source src="../Session 5/Friends_on_Social_Media.mp4" type="video/mp4"></video>
     </div>
 
     <div class="card" style="background:linear-gradient(135deg,#fef9e7,#fff3e6);border:1px solid rgba(232,168,56,0.2)">
       <h3>&#x1F3A7; Deep Dive: Social Media English</h3>
       <p style="font-size:0.88rem;color:var(--text-dim);margin-bottom:8px">Full audio lesson &mdash; vocabulary, grammar &amp; social media culture</p>
-      <iframe src="https://drive.google.com/file/d/1MNYqTZgHtELE7EBaNX7IXpRqOvzi_wcW/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
+      <audio controls preload="none" style="width:100%;display:block;border-radius:12px"><source src="../Session 5/Social_Media_Friendships_and_Past_Continuous_Grammar.m4a" type="audio/mp4"></audio>
     </div>
 
     <div class="card" style="background:linear-gradient(135deg,#e8eaff,#f0f0ff);border:1px solid #d0d3f0">
       <h3>&#x1F4DE; Quick Review: Social Media Vocabulary</h3>
       <p style="font-size:0.88rem;color:var(--text-dim);margin-bottom:8px">Simple English for talking about social media &mdash; key phrases &amp; examples</p>
-      <iframe src="https://drive.google.com/file/d/1XIYoz3BVgBtCOzDyXXJlhj1cIrnrM6Im/preview" style="width:100%;height:80px;border:0;border-radius:12px"></iframe>
+      <audio controls preload="none" style="width:100%;display:block;border-radius:12px"><source src="../Session 5/English_for_social_media_and_stories.m4a" type="audio/mp4"></audio>
     </div>
 
     <div class="card">
@@ -505,6 +505,7 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
     <div style="text-align:center;margin-top:16px">
       <button class="btn" style="background:var(--accent);color:#fff;font-size:1rem;padding:12px 30px" onclick="showQuizScore()">Show My Score</button>
       <button class="btn" style="background:var(--blue);color:#fff;font-size:1rem;padding:12px 30px;margin-left:10px" onclick="retryQuiz()">Retry Quiz</button>
+      <a href="kahoot-session5.html" style="display:inline-block;margin-left:10px;padding:12px 30px;background:var(--red);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:1rem">Kahoot! &#x1F3AE;</a>
     </div>
     <div class="card hidden mt-16 text-center" id="quiz-final" style="border:3px solid var(--border)"></div>
   </div>
@@ -588,10 +589,6 @@ h1,h2,h3{font-family:'Fredoka',sans-serif}
 </div>
 
 <script>
-const driveMap_Past_Continuous_Director_s_Cut_page={"0001": "1HIiupZ9VVJPz2pOTVUHiQ2YftVZ1yGYg", "0002": "1zbaB6_TSXMIys_6AvYV5_8HyVIGqXVYJ", "0003": "1CdMQjUBj_xTlAosN6cXrdMR2V61RFU-Y", "0004": "1ziSXr4DCNYLiiINUm69DnAoZ1lX98Hc0", "0005": "1BFRF5IMH9CtCMZ5LFC2xYXiXeQc_bvV5", "0006": "1NtbDVFE6NRMx2uPsq8bKuWvuPMQ4IHFi", "0007": "1hJ66yF5jadTlEAAfPma1__RZkT7GZiyO", "0008": "1sYKzEkLmLk02JebCac5MK_NYtBMCV9_B", "0009": "13i5Lwiys3PdI1-Gi9dH23D0padHzmnb8", "0010": "1B2-RrxisZpkfX_UIlfSoju5OZCD5n7zp", "0011": "12NTqZPw4QIckza21YUvoRcyB8BA5AIif", "0012": "16pMTyHmXP-of_Tm6DMtMjovvu3b65G95", "0013": "1aLqdeInPM8lKayQmsPDcIlYxsIdDXKNM"};
-
-const driveMap_Social_Media_English_page={"0001": "1b1QnHKGVs9sz4gN5VlYMpA6qu2p9pqXe", "0002": "1XYnKUsk8Ys-mGY-M46XqfnWWQDOxrQ26", "0003": "1A5_1TkPKhz6JYRyKXM4vBp85bqxxKOII", "0004": "1o1bLw7iPozIIClVHxmKS5WQJ8xlWcVHS", "0005": "1pyZXOQLktsxeYK5B0FKqizButsyY0HHk", "0006": "13emmyGe5cqfsbM7sJ3t3dsWIMBsxfzgS", "0007": "1XUedAoXoAA69VZGX1SX6-nMvMY-ZIBD2", "0008": "1kWKyS2OQLbJtjJ1PvVdd3_Q7tTal4wny", "0009": "1NogPOZ2hNR53T22ovcAzHYgMKZtwlib7", "0010": "1bIdXkZnxyzmR50uRURod4eRXywHUeMMs", "0011": "1LXPHZLWUbEhKQqLa-iB4h8KeIBAhqdyn", "0012": "1oMq0IRjZDCYz2d0g8H0QZ73_BQH2LciC", "0013": "1VKVyijNs8B1RwDuf8ELPEDKJvY_ode9n", "0014": "1GZ0I59AP3_Mu2KEkT8jmKxzMkI_xvQcB", "0015": "1FoVirK_nxhXzJqwokFQY7Ji8qptIh9Bj"};
-
 function speak(w,b){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w);u.lang='en-US';u.rate=0.85;const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith('en'));if(v)u.voice=v;if(b){b.classList.add('playing');u.onend=()=>b.classList.remove('playing')}speechSynthesis.speak(u)}
 if('speechSynthesis' in window)speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
 
@@ -747,7 +744,7 @@ const slideState={grammar:{current:0,total:0},vocab:{current:0,total:0}};
 function initSlideshow(n){const t=document.getElementById(n+'Track');if(!t)return;const sl=t.querySelectorAll('.slide');slideState[n].total=sl.length;const dc=document.getElementById(n+'Dots');dc.innerHTML='';for(let i=0;i<sl.length;i++){const d=document.createElement('span');d.className='slide-dot'+(i===0?' active':'');d.onclick=()=>{slideState[n].current=i;updateSlide(n)};dc.appendChild(d)}updateSlide(n)}
 function slideNav(n,dir){const s=slideState[n];s.current=Math.max(0,Math.min(s.total-1,s.current+dir));updateSlide(n)}
 function updateSlide(n){const s=slideState[n];document.getElementById(n+'Track').style.transform='translateX(-'+s.current*100+'%)';document.getElementById(n+'Counter').textContent=(s.current+1)+' / '+s.total;document.getElementById(n+'Prev').disabled=s.current===0;document.getElementById(n+'Next').disabled=s.current===s.total-1;document.getElementById(n+'Dots').querySelectorAll('.slide-dot').forEach((d,i)=>d.classList.toggle('active',i===s.current))}
-function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=15;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Social_Media_English_page[String(i).padStart(4,'0')]+'" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=13;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+driveMap_Past_Continuous_Director_s_Cut_page[String(i).padStart(4,'0')]+'" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
+function buildSlides(){const vt=document.getElementById('vocabTrack');for(let i=1;i<=15;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 5/Social_Media_English_page-'+String(i).padStart(4,'0')+'.jpg" alt="Vocab Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';vt.appendChild(s)}const gt=document.getElementById('grammarTrack');for(let i=1;i<=13;i++){const s=document.createElement('div');s.className='slide';s.innerHTML='<img src="../Session 5/Past_Continuous_Director_s_Cut_page-'+String(i).padStart(4,'0')+'.jpg" alt="Grammar Slide '+i+'" loading="lazy" style="max-width:100%;max-height:500px;border-radius:8px">';gt.appendChild(s)}}
 document.addEventListener('DOMContentLoaded',()=>{buildSlides();buildRecap();buildVocabCards(onlineVocab,'vg-online');buildVocabCards(friendVocab,'vg-friends');buildVocabCards(safetyVocab,'vg-safety');buildVocabEx();buildMCQ(listen1Data,'listen1-questions','l1q');buildTF(listen1TF,'listen1-tf','l1tf');buildTF(listen2TF,'listen2-tf','l2tf');buildGrammar();buildTF(readingTF,'reading-tf','rtf');buildMCQ(readingQ,'reading-questions','rq');buildQuiz();initSlideshow('grammar');initSlideshow('vocab');loadNotes();loadTracker()});
 </script>
 </body>
